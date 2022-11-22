@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>대구미술관</title>
-    <link rel="stylesheet" href="./resource/CSS/RSM_reset.css" />
+    <link rel="stylesheet" href="./CSS/RSM_reset.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -13,14 +13,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./resource/CSS/common.css" />
-    <script src="./resource/JS/common.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./CSS/common.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./JS/common.js" defer></script>
   </head>
   <body>
     <header>
       <div class="hd_top">
         <div class="top_logo">
-          <img src="" alt="" />
+          <h1>
+            <img src="./img/top_logo_kr.svg" alt="logo_kr" />
+            <img src="./img/top_logo_en.svg" alt="logo_en" />
+            <img src="./img/symbol.svg" alt="symbol" />
+          </h1>
         </div>
         <div>
           <button>KOR ▽</button>
@@ -107,5 +115,86 @@
         </nav>
       </div>
     </header>
+    <section class="sec1">
+      <article class="main_banner">
+        <div>
+          <!-- Swiper -->
+          <article class="swiper main_banner_slide">
+            <h2 hidden>메인배너</h2>
+            <div class="inner_wrap">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="./img/main_01.jpg" alt="main_banner01" /></li>
+                <li class="swiper-slide"><img src="./img/main_02.jpg" alt="main_banner02" /></li>
+                <li class="swiper-slide"><img src="./img/main_03.jpg" alt="main_banner03" /></li>
+              </ul>
+            </div>
+            <div class="swiper-pagination main_banner_pg"></div>
+          </article>
+        </div>
+      </article>
+      <div class="open">
+        <p>
+          <strong>대구미술관 관람시간 안내</strong>
+          <span>하절기(4월 ~ 10월) : 오전 10시~오후 7시</span>
+          <span>동절기(11월 ~ 3월) : 오전 10시~오후 6시</span>
+        </p>
+      </div>
+      <div class="reservation">
+        <p>
+          <strong>단체 관람 예약</strong>
+          <span>20인이상 단체는 반드시 예약 후 방문해 주시기 바랍니다.</span>
+          <span>※ 미예약 방문단체는 당일 전시장 관람가능인원 초과시 입장이 불가능 할 수 있습니다.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="sec2">
+      <article class="tab_con">
+        <h2 hidden>새로운 소식들</h2>
+        <div class="tab_btns">
+          <button>새 소식</button>
+          <button>공지사항</button>
+          <button>보도자료</button>
+        </div>
+        <div class="card_con">
+          <article class="news">
+            <h3 hidden>새 소식</h3>
+            <ul class="news_con">
+              <li class="news_list">
+                <div class="news_img">
+                  <img src="./img/새소식01.jpg" alt="새소식01" />
+                </div>
+                <p>대구미술관 ‘제1회 정점식미술상’시상식 성황리 개최</p>
+                <p>
+                  대구미술관(관장 최은주)은 미술사가 양은희(梁恩姬, 1965년 제주 출생)를 ‘제1회 정점식미술상’ 수상자로 선정하고, 6월 15일(수) 오후 5시,
+                  대구미술관 강당에서 시상식을 가졌다.
+                </p>
+              </li>
+              <li class="news_list">
+                <div class="news_img">
+                  <img src="./img/새소식02.jpg" alt="새소식02" />
+                </div>
+                <p>3년 만에 만나는 대구미술관 가정의 달 행사“놀자, 뛰자, 웃자.”</p>
+                <p>
+                  대구미술관(관장 최은주)은 미술사가 양은희(梁恩姬, 1965년 제주 출생)를 ‘제1회 정점식미술상’ 수상자로 선정하고, 6월 15일(수) 오후 5시,
+                  대구미술관 강당에서 시상식을 가졌다.
+                </p>
+              </li>
+              <li class="news_list">
+                <div class="news_img">
+                  <img src="./img/새소식03.jpg" alt="새소식03" />
+                </div>
+                <p>대구미술관 ‘제1회 정점식미술상’시상식 성황리 개최</p>
+                <p>
+                  대구미술관(관장 최은주)은 미술사가 양은희(梁恩姬, 1965년 제주 출생)를 ‘제1회 정점식미술상’ 수상자로 선정하고, 6월 15일(수) 오후 5시,
+                  대구미술관 강당에서 시상식을 가졌다.
+                </p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </article>
+      <article class="side_banner"></article>
+    </section>
   </body>
 </html>
