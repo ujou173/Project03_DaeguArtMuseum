@@ -1,1 +1,42 @@
 @charset 'utf-8';
+
+/* 나눔스퀘어 Neo */
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 프리텐다드 */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  color: #333;
+  --font_NanumSquareNeo: "NanumSquareNeo-Variable";
+  --font_Pretendard: "Pretendard-Regular";
+  --font_size_H1_42pt: 42px;
+  --font_size_H2_32pt: 32px;
+  --font_size_H3_24pt: 24px;
+  --font_size_H4_16pt: 16px;
+  --font_size_b1_24pt: 16px;
+  --font_size_b2_16pt: 16px;
+  --color_main_01: #ea6001;
+  --color_main_02: #de9417;
+  --color_main_03: #f4faf6;
+  --color_light_gray: #eaeaea;
+  --color_dark_gray: #999999;
+  --color_white: #ffffff;
+  --speed_03: 0.3s;
+  --speed_05: 0.5s;
+}
+
+.mw {
+  width: calc(100% - 2rem);
+  max-width: 1620px;
+  margin: auto;
+}
