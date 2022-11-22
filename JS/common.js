@@ -1,5 +1,8 @@
+// .lang 하위의 버튼
+const $lang = document.querySelector(".lang button");
+
 // sec1 메인배너 슬라이드
-var swiper = new main_banner(".main_banner_slide", {
+var main_banner = new Swiper(".main_banner_slide", {
   loop: true,
   pagination: {
     el: ".main_banner_pg",
@@ -11,7 +14,7 @@ var swiper = new main_banner(".main_banner_slide", {
 });
 
 // sec2 새소식 슬라이드
-var swiper = new news_sl(".news_list", {
+var news_sl = new Swiper(".news_list", {
   navigation: {
     nextEl: ".news_next",
     prevEl: ".news_prev",
@@ -19,7 +22,7 @@ var swiper = new news_sl(".news_list", {
 });
 
 // sec2 공지사항 슬라이드
-var swiper = new notice_sl(".notice_list", {
+var notice_sl = new Swiper(".notice_list", {
   navigation: {
     nextEl: ".notice_next",
     prevEl: ".notice_prev",
@@ -27,7 +30,7 @@ var swiper = new notice_sl(".notice_list", {
 });
 
 // sec2 보도자료 슬라이드
-var swiper = new media_sl(".media_list", {
+var media_sl = new Swiper(".media_list", {
   navigation: {
     nextEl: ".media_next",
     prevEl: ".media_prev",
@@ -35,7 +38,7 @@ var swiper = new media_sl(".media_list", {
 });
 
 //sec4 디지털 미술관 슬라이드
-var swiper = new youtube_sl(".digital_museum_slide", {
+var youtube_sl = new Swiper(".digital_museum_slide", {
   initialSlide: 1,
   effect: "coverflow",
   grabCursor: true,
