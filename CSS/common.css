@@ -40,3 +40,44 @@
   max-width: 1620px;
   margin: auto;
 }
+
+header {
+  border: 1px solid red;
+}
+
+.hd_top {
+  border: 1px solid gold;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hd_top .hd_logo {
+  border: 1px solid green;
+  width: 450px;
+}
+
+.hd_top .hd_logo img {
+  width: auto;
+  height: 100%;
+}
+
+.hd_top .m_top_logo {
+  display: none;
+}
+
+.hd_top .lang {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+}
+
+.hd_top .lang button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hd_top .lang li {
+  display: none;
+}
