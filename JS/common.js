@@ -43,7 +43,7 @@ var swiper = new youtube_sl(".digital_museum_slide", {
   slidesPerView: 1,
   breakpoints: {
     // 나중에 반응형 하면서 포인트 값 수정할 것
-    640: {
+    400: {
       slidesPerView: "auto",
       spaceBetween: 50,
     },
