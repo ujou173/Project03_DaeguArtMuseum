@@ -25,16 +25,16 @@
       <div class="hd_top mw">
         <div class="hd_logo">
           <h1>
-            <img src="./img/top_logo.svg" alt="logo" class="top_logo" />
-            <img src="./img/m_top_logo.svg" alt="symbol" class="m_top_logo" />
+            <a href="#" class="top_logo"><img src="./img/top_logo.svg" alt="logo" /></a>
+            <a href="#" class="m_top_logo"><img src="./img/m_top_logo.svg" alt="symbol" /></a>
           </h1>
         </div>
         <div class="lang">
           <button>KOR ▽</button>
           <ul>
-            <li>EN</li>
-            <li>CN</li>
-            <li>JP</li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">CN</a></li>
+            <li><a href="#">JP</a></li>
           </ul>
         </div>
       </div>
@@ -115,35 +115,38 @@
       </div>
     </header>
     <section class="sec1">
-      <article class="main_banner">
-        <div>
-          <!-- Swiper -->
-          <article class="swiper main_banner_slide">
-            <h2 hidden>메인배너</h2>
-            <div class="inner_wrap">
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide"><img src="./img/main_01.jpg" alt="main_banner01" /></li>
-                <li class="swiper-slide"><img src="./img/main_02.jpg" alt="main_banner02" /></li>
-                <li class="swiper-slide"><img src="./img/main_03.jpg" alt="main_banner03" /></li>
-              </ul>
-            </div>
-            <div class="swiper-pagination main_banner_pg"></div>
-          </article>
+      <!-- Swiper -->
+      <article class="swiper main_banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/main_01.jpg" alt="main01" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/main_02.jpg" alt="main02" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./img/main_03.jpg" alt="main03" /></a>
+          </div>
         </div>
+        <div class="swiper-pagination main_banner_pg"></div>
       </article>
-      <div class="open">
-        <p>
+      <div class="guide">
+        <div class="open">
           <strong>대구미술관 관람시간 안내</strong>
-          <span>하절기(4월 ~ 10월) : 오전 10시~오후 7시</span>
-          <span>동절기(11월 ~ 3월) : 오전 10시~오후 6시</span>
-        </p>
-      </div>
-      <div class="reservation">
-        <p>
-          <strong>단체 관람 예약</strong>
-          <span>20인이상 단체는 반드시 예약 후 방문해 주시기 바랍니다.</span>
-          <span>※ 미예약 방문단체는 당일 전시장 관람가능인원 초과시 입장이 불가능 할 수 있습니다.</span>
-        </p>
+          <p>
+            <span>하절기(4월 ~ 10월) : 오전 10시~오후 7시</span>
+            <span>동절기(11월 ~ 3월) : 오전 10시~오후 6시</span>
+          </p>
+          <a href="#" title="자세히보기"></a>
+        </div>
+        <div class="reservation">
+          <p>
+            <strong>단체 관람 예약</strong>
+            <span>20인이상 단체는 반드시 예약 후 방문해 주시기 바랍니다.</span>
+            <span>※ 미예약 방문단체는 당일 전시장 관람가능인원 초과시 입장이 불가능 할 수 있습니다.</span>
+          </p>
+          <a href="#" title="자세히보기"></a>
+        </div>
       </div>
     </section>
 
