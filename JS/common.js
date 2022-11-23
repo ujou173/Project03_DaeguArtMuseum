@@ -17,6 +17,14 @@ var mainBannerSl = new Swiper(".main_banner", {
   },
 });
 
+// sec2 tab menu 버튼
+$(function () {
+  $(".sec2 .tab_btns > button").click(function () {
+    let btnIndex = $(this).index();
+    console.log(btnIndex);
+  });
+});
+
 // sec2 새소식 슬라이드
 var newsSl = new Swiper(".news_list", {
   navigation: {

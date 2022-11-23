@@ -16,6 +16,12 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./CSS/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./JS/common.js" defer></script>
@@ -154,15 +160,15 @@
       <article class="tab_con">
         <h2 hidden>게시판</h2>
         <div class="tab_btns">
-          <button>새 소식</button>
+          <button class="on">새 소식</button>
           <button>공지사항</button>
           <button>보도자료</button>
         </div>
         <div class="card_con">
           <!-- Swiper -->
-          <article class="swiper news_list">
-            <h3 hidden>새 소식</h3>
-            <div class="news_wrap">
+          <div class="news_wrap on">
+            <article class="swiper news_list">
+              <h3 hidden>새 소식</h3>
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
                   <div class="news_img">
@@ -197,12 +203,12 @@
               </ul>
               <div class="swiper-button-next news_next"></div>
               <div class="swiper-button-prev news_prev"></div>
-            </div>
-            <a href="#">&#43; 더보기</a>
-          </article>
-          <article class="swiper notice_list">
-            <h3 hidden>공지사항</h3>
-            <div class="notice_wrap">
+              <a href="#">&#43; 더보기</a>
+            </article>
+          </div>
+          <div class="notice_wrap">
+            <article class="swiper notice_list">
+              <h3 hidden>공지사항</h3>
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
                   <div class="notice_img">
@@ -237,12 +243,12 @@
               </ul>
               <div class="swiper-button-next notice_next"></div>
               <div class="swiper-button-prev notice_prev"></div>
-            </div>
-            <a href="#">&#43; 더보기</a>
-          </article>
-          <article class="swiper media_list">
-            <h3 hidden>보도자료</h3>
-            <div class="media_wrap">
+              <a href="#">&#43; 더보기</a>
+            </article>
+          </div>
+          <div class="media_wrap">
+            <article class="swiper media_list">
+              <h3 hidden>보도자료</h3>
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
                   <div class="media_img">
@@ -277,13 +283,13 @@
               </ul>
               <div class="swiper-button-next media_next"></div>
               <div class="swiper-button-prev media_prev"></div>
-            </div>
-            <a href="#">&#43; 더보기</a>
-          </article>
+              <a href="#">&#43; 더보기</a>
+            </article>
+          </div>
         </div>
       </article>
       <article class="side_banner">
-        <h2>사이드배너</h2>
+        <h2 hidden>사이드배너</h2>
         <div class="edu_banner">
           <img src="./img/edu01.jpg" alt="교육01" />
         </div>
