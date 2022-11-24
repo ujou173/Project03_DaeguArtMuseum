@@ -18,15 +18,34 @@ var mainBannerSl = new Swiper(".main_banner", {
 });
 
 // sec2 tab menu 버튼
-$(function () {
-  $(".sec2 .tab_btns > button").click(function () {
-    let btnIndex = $(this).index();
-    console.log(btnIndex);
+const $tabBtn = document.querySelectorAll(".sec2 .tab_btns > button");
+const $cardCon = document.querySelectorAll(".sec2 .card_con > div");
+
+$tabBtn.forEach(function (item, idx) {
+  item.addEventListener("click", function () {
+    btnOn(idx);
+    cardOn(idx);
   });
 });
 
+function btnOn(num) {
+  $tabBtn.forEach(function (Tbtn, i) {
+    Tbtn.classList.remove("on");
+  });
+  $tabBtn[num].classList.add("on");
+}
+
+function cardOn(num1) {
+  $cardCon.forEach(function (Tcard, i) {
+    Tcard.classList.remove("on");
+  });
+  $cardCon[num1].classList.add("on");
+}
+
 // sec2 새소식 슬라이드
 var newsSl = new Swiper(".news_list", {
+  slidesPerView: 3,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".news_next",
     prevEl: ".news_prev",
@@ -35,6 +54,8 @@ var newsSl = new Swiper(".news_list", {
 
 // sec2 공지사항 슬라이드
 var noticeSl = new Swiper(".notice_list", {
+  slidesPerView: 3,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".notice_next",
     prevEl: ".notice_prev",
@@ -43,6 +64,8 @@ var noticeSl = new Swiper(".notice_list", {
 
 // sec2 보도자료 슬라이드
 var mediaSl = new Swiper(".media_list", {
+  slidesPerView: 3,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".media_next",
     prevEl: ".media_prev",

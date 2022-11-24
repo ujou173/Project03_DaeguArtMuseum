@@ -365,12 +365,54 @@
 
 .sec2 {
   margin-top: 5rem;
+  margin-bottom: 5rem;
   display: flex;
+  /* border: 1px solid green; */
+  position: relative;
+}
+
+.sec2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(69% - 2rem);
+  height: 1px;
+  background-color: var(--color_light_gray);
 }
 
 .sec2 .tab_con {
-  width: 70%;
-  /* border: 1px solid green; */
+  width: 69%;
+  padding-right: 2rem;
+  /* border: 3px solid green; */
+}
+
+.sec2 .side_banner {
+  /* border: 3px solid gold; */
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+}
+
+.sec2 .side_banner div {
+  /* border: 2px solid black; */
+  width: 100%;
+  padding-top: 65%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec2 .side_banner div:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.sec2 .side_banner img {
+  width: 105%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sec2 .tab_btns {
@@ -380,6 +422,7 @@
 
 .sec2 .tab_btns button {
   border: 1px solid var(--color_light_gray);
+  border-bottom: none;
   background-color: var(--color_white);
   cursor: pointer;
   width: 20%;
@@ -417,6 +460,102 @@
 
 .sec2 .card_con > div.on {
   display: block;
+}
+
+.sec2 .card_con > div {
+  position: relative;
+}
+
+.sec2 .card_con > div > a {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  transform: translateY(-110%);
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+}
+
+.sec2 .card_con article {
+  border-top: 1px solid var(--color_light_gray);
+}
+
+/* 슬라이드 */
+.sec2 .card_con > div li {
+  border: 1px solid var(--color_light_gray);
+  border-radius: 5px;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+/* 3번째 슬라이드 오른쪽 border가 overflow 되는걸 막기 위한 padding */
+.sec2 .card_con > div {
+  padding-right: 1px;
+}
+
+/* 슬라이드 안의 이미지를 감싸는 div */
+.sec2 .card_con > div li > div:first-of-type {
+  /* border: 3px solid gray; */
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+/* 카드에 호버시 이미지 확대 효과를 위해 oveflow */
+.sec2 .card_con > div li > div:first-child {
+  overflow: hidden;
+}
+
+.sec2 .card_con > div li > div img {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--speed_03);
+}
+
+.sec2 .card_con > div li:hover img {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.sec2 .card_con .text {
+  padding: 1rem;
+}
+
+.sec2 .card_con .text p:first-child {
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+  padding-bottom: 0.5rem;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 76px;
+}
+
+.sec2 .card_con .text p:last-child {
+  /* border: 1px solid black; */
+  font-size: var(--font_size_b2_16pt);
+  font-family: var(--font_Pretendard);
+  padding-bottom: 0.5rem;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100px;
+}
+
+.sec2 .card_con > div li > a {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /* sec2 end */
