@@ -104,6 +104,11 @@
   background-color: var(--color_light_gray);
 }
 
+.hd_top .lang li a {
+  width: 100%;
+  text-align: center;
+}
+
 .hd_bottom {
   border: 1px solid var(--color_light_gray);
   border-left: none;
