@@ -4,7 +4,7 @@
 @font-face {
   font-family: "NanumSquareNeo-Variable";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 /* 프리텐다드 */
@@ -23,7 +23,7 @@
   --font_size_H2_32pt: 32px;
   --font_size_H3_24pt: 24px;
   --font_size_H4_16pt: 16px;
-  --font_size_b1_24pt: 16px;
+  --font_size_b1_24pt: 24px;
   --font_size_b2_16pt: 16px;
   --color_main_01: #ea6001;
   --color_main_02: #de9417;
@@ -530,7 +530,6 @@
 .sec2 .card_con .text p:first-child {
   font-size: var(--font_size_H3_24pt);
   font-family: var(--font_NanumSquareNeo);
-  padding-bottom: 0.5rem;
   display: -webkit-box;
   word-wrap: break-word;
   -webkit-line-clamp: 2;
@@ -544,14 +543,14 @@
   /* border: 1px solid black; */
   font-size: var(--font_size_b2_16pt);
   font-family: var(--font_Pretendard);
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   display: -webkit-box;
   word-wrap: break-word;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 100px;
+  height: 108px;
 }
 
 .sec2 .card_con > div li > a {
@@ -594,7 +593,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.7;
+  opacity: 0.8;
   transition: var(--speed_05);
 }
 /* 미술상 배너 마우스 호버시 줄 효과 고민해볼 것. opacity는 너무 흐릿해서 별로일것 같음 */
@@ -603,3 +602,302 @@
 }
 
 /* sec3 end */
+/* sec4 start */
+
+.sec4 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.sec4 .video_desc h2 {
+  font-size: var(--font_size_H1_42pt);
+  font-family: var(--font_NanumSquareNeo);
+  color: var(--color_main_02);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.sec4 .video_desc h2::before,
+.sec4 .video_desc h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 1px;
+  background-color: var(--color_dark_gray);
+}
+
+.sec4 .video_desc h2::before {
+  left: 0;
+}
+
+.sec4 .video_desc h2::after {
+  right: 0;
+}
+
+.sec4 .video_desc strong {
+  font-size: var(--font_size_b1_24pt);
+  font-family: var(--font_Pretendard);
+}
+
+.sec4 .video_wrap {
+  position: relative;
+}
+
+.sec4 .digital_museum_slide {
+  width: 80%;
+}
+
+/* video slide */
+.sec4 .digital_museum_slide li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec4 .digital_museum_slide li p {
+  font-size: var(--font_size_b1_24pt);
+  font-family: var(--font_Pretendard);
+  color: black;
+  opacity: 0;
+  padding-bottom: 2rem;
+}
+
+.sec4 .digital_museum_slide li.swiper-slide-active p {
+  opacity: 1;
+}
+
+.sec4 .digital_museum_slide video {
+  width: 80%;
+}
+
+.sec4 .digital_museum_next,
+.sec4 .digital_museum_prev {
+  position: absolute;
+  top: 57%;
+  bottom: auto;
+  transform: translateY(-50%);
+  color: var(--color_main_02);
+}
+
+.sec4 .digital_museum_next {
+  left: auto;
+  right: 0;
+}
+
+.sec4 .digital_museum_prev {
+  right: auto;
+  left: 0;
+}
+
+.sec4 > a {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+  color: var(--color_white);
+  background-color: var(--color_main_02);
+  border: 1px solid var(--color_light_gray);
+  border-radius: 999px;
+  transition: var(--speed_03);
+}
+
+.sec4 > a:hover {
+  background-color: var(--color_main_01);
+}
+
+/* sec4 end */
+/* sec5 start */
+
+.sec5 {
+  text-align: center;
+}
+
+.sec5 h2 {
+  font-size: var(--font_size_H1_42pt);
+  font-family: var(--font_NanumSquareNeo);
+  color: var(--color_main_02);
+  /* margin-bottom: 2rem; */
+  position: relative;
+}
+
+.sec5 h2::before,
+.sec5 h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 1px;
+  background-color: var(--color_dark_gray);
+}
+
+.sec5 h2::before {
+  left: 0;
+}
+
+.sec5 h2::after {
+  right: 0;
+}
+
+.sec5 > div {
+  /* border: 1px solid red; */
+  position: relative;
+  padding-top: 30%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sec5 .collection {
+  display: flex;
+  width: 350%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: collect 90s 1s linear infinite;
+}
+
+.sec5 .collection:hover {
+  animation-play-state: paused;
+}
+
+.sec5 .collection li {
+  /* border: 3px solid red; */
+  padding: 2rem 0;
+}
+
+.sec5 .collection li img {
+  width: 100%;
+  /* border: 1px solid var(--color_dark_gray); */
+  transition: var(--speed_05);
+  padding: 0 1rem;
+}
+
+.sec5 .collection li img:hover {
+  transform: scale(1.05);
+}
+
+/* 소장품 애니메이션 */
+@keyframes collect {
+  0% {
+    left: 0;
+  }
+  40% {
+    left: -250%;
+  }
+  50% {
+    left: -250%;
+  }
+  90% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.sec5 > a {
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+  color: var(--color_white);
+  background-color: var(--color_main_02);
+  border: 1px solid var(--color_light_gray);
+  border-radius: 999px;
+  transition: var(--speed_03);
+}
+
+.sec5 > a:hover {
+  background-color: var(--color_main_01);
+}
+
+/* sec5 end */
+/* footer start */
+
+footer {
+  border: 1px solid var(--color_light_gray);
+  border-left: none;
+  border-right: none;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  font-size: var(--font_size_b2_16pt);
+  font-family: var(--font_Pretendard);
+}
+
+.footer_wrap {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_left {
+  display: flex;
+}
+
+.footer_left > * {
+  padding: 0 1rem;
+  position: relative;
+}
+
+.footer_left > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: var(--color_dark_gray);
+}
+
+.footer_left address {
+  display: flex;
+}
+
+.footer_left address span {
+  padding-right: 2rem;
+  position: relative;
+}
+
+.footer_left address span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: var(--color_dark_gray);
+}
+
+.footer_left address span:last-of-type:after {
+  display: none;
+}
+
+.footer_left address p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: var(--color_dark_gray);
+}
+
+.sns_icon p {
+  /* border: 1px solid red; */
+  line-height: 1rem;
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+/* footer end */

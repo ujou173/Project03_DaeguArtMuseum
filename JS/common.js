@@ -72,7 +72,7 @@ var mediaSl = new Swiper(".media_list", {
   },
 });
 
-//sec4 디지털 미술관 슬라이드
+//sec4 디지털 미술관 동영상 슬라이드
 var youtubeSl = new Swiper(".digital_museum_slide", {
   initialSlide: 1,
   effect: "coverflow",
@@ -87,18 +87,56 @@ var youtubeSl = new Swiper(".digital_museum_slide", {
     },
   },
   coverflowEffect: {
-    rotate: -5,
-    stretch: 90,
+    rotate: 0,
+    stretch: 300,
     depth: 100,
     modifier: 1.5,
-    slideShadows: true,
+    slideShadows: false,
   },
-  // 네비게이션이 안될 수 있음. 그럴 경우 pg로 변경할 것
   navigation: {
     nextEl: ".digital_museum_next",
     prevEl: ".digital_museum_prev",
   },
-  // pagination: {
-  //   el: ".swiper-pagination"
-  // }
+});
+
+//sec4 디지털 미술관 동영상 클릭시 play
+const $vidList = document.querySelectorAll(".digital_museum_slide li"),
+  $btnNext = document.querySelector(".digital_museum_next"),
+  $btnPrev = document.querySelector(".digital_museum_prev"),
+  $stop = document.querySelectorAll(".digital_museum_slide li video");
+let vidToggle = 0;
+console.log($vidList);
+console.log($stop);
+
+$vidList.forEach(function (item, idx) {
+  item.addEventListener("click", function () {
+    let vidPlay = this.childNodes[3];
+    if (vidToggle == 0) {
+      vidPlay.play();
+      vidToggle = 1;
+      // console.log(vidPlay);
+      // console.log(vidToggle);
+    } else {
+      if (vidToggle == 1) {
+        vidPlay.pause();
+        vidToggle = 0;
+        // console.log(vidPlay);
+        // console.log(vidToggle);
+      }
+    }
+  });
+});
+
+$btnNext.addEventListener("click", function () {
+  $stop.forEach(function (item, idx) {
+    item.pause();
+    vidToggle = 0;
+  });
+});
+
+$btnPrev.addEventListener("click", function () {
+  $stop.forEach(function (item, idx) {
+    item.pause();
+    vidToggle = 0;
+  });
 });
