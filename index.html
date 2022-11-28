@@ -27,29 +27,15 @@
     <script src="./JS/common.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="hd_top mw">
-        <div class="hd_logo">
-          <h1>
-            <a href="#" class="top_logo"><img src="./img/top_logo.svg" alt="logo" /></a>
-            <a href="#" class="m_top_logo"><img src="./img/m_top_logo.svg" alt="symbol" /></a>
-          </h1>
-        </div>
-        <div class="lang">
-          <button>KOR ▽</button>
-          <ul>
-            <li><a href="#">EN</a></li>
-            <li><a href="#">CN</a></li>
-            <li><a href="#">JP</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="hd_bottom">
+    <main>
+      <!-- 햄버거 버튼 메가메뉴 -->
+      <div class="mega_bg"></div>
+      <div class="hd_ham">
         <nav>
-          <ul class="gnb mw">
+          <ul class="ham_gnb">
             <li>
               <a href="">전시</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">현재전시</a></li>
                 <li><a href="#">지난전시</a></li>
                 <li><a href="#">예정전시</a></li>
@@ -57,7 +43,7 @@
             </li>
             <li>
               <a href="">교육 및 행사</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">렉쳐</a></li>
                 <li><a href="#">전시연계</a></li>
                 <li><a href="#">이벤트</a></li>
@@ -65,14 +51,14 @@
             </li>
             <li>
               <a href="">소장품</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">소장품 검색</a></li>
                 <li><a href="#">이건희 컬렉션</a></li>
               </ul>
             </li>
             <li>
               <a href="">디지털 미술관</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">디지털 미술관</a></li>
                 <li><a href="#">미술 정보 센터</a></li>
                 <li><a href="#">아카이브실</a></li>
@@ -83,14 +69,14 @@
             </li>
             <li>
               <a href="">미술상</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">이인성미술상</a></li>
                 <li><a href="#">정점식미술상</a></li>
               </ul>
             </li>
             <li>
               <a href="">커뮤니티</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">게시판</a></li>
                 <li><a href="#">관람후기</a></li>
                 <li><a href="#">네트워크</a></li>
@@ -98,7 +84,7 @@
             </li>
             <li>
               <a href="">공지사항</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">새 소식</a></li>
                 <li><a href="#">메일링 서비스</a></li>
@@ -107,7 +93,7 @@
             </li>
             <li>
               <a href="">미술관 소개</a>
-              <ul class="sub">
+              <ul class="ham_sub">
                 <li><a href="#">대구미술관</a></li>
                 <li><a href="#">관람안내</a></li>
                 <li><a href="#">오시는길</a></li>
@@ -118,347 +104,483 @@
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-    <section class="sec1">
-      <!-- Swiper -->
-      <article class="swiper main_banner">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#"><img src="./img/main_01.jpg" alt="main01" /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#"><img src="./img/main_02.jpg" alt="main02" /></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#"><img src="./img/main_03.jpg" alt="main03" /></a>
-          </div>
-        </div>
-        <div class="swiper-pagination main_banner_pg"></div>
-      </article>
-      <div class="guide">
-        <div class="open">
-          <strong>대구미술관 관람시간 안내</strong>
-          <p>
-            <span>하절기(4월 ~ 10월) : 오전 10시~오후 7시</span>
-            <span>동절기(11월 ~ 3월) : 오전 10시~오후 6시</span>
-          </p>
-          <a href="#" title="자세히보기"></a>
-        </div>
-        <div class="reservation">
-          <p>
-            <strong>단체 관람 예약</strong>
-            <span>20인이상 단체는 반드시 예약 후 방문해 주시기 바랍니다.</span>
-            <span>※ 미예약 방문단체는 당일 전시장 관람가능인원 초과시 입장이 불가능 할 수 있습니다.</span>
-          </p>
-          <a href="#" title="자세히보기"></a>
+        <div class="ham_lang">
+          <button>KOR ▽</button>
+          <ul>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">CN</a></li>
+            <li><a href="#">JP</a></li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <section class="sec2 mw">
-      <article class="tab_con">
-        <h2 hidden>게시판</h2>
-        <div class="tab_btns">
-          <button class="on">새 소식</button>
-          <button>공지사항</button>
-          <button>보도자료</button>
-        </div>
-        <div class="card_con">
-          <!-- Swiper -->
-          <div class="news_wrap on">
-            <article class="swiper news_list">
-              <h3 hidden>새 소식</h3>
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <div class="news_img">
-                    <img src="./img/새소식01.jpg" alt="새소식01" />
-                  </div>
-                  <div class="text">
-                    <p class="news_title">대구미술관 ‘제1회 정점식미술상’시상식 성황리 개최</p>
-                    <p class="news_desc">
-                      대구미술관(관장 최은주)은 미술사가 양은희(梁恩姬, 1965년 제주 출생)를 ‘제1회 정점식미술상’ 수상자로 선정하고, 6월 15일(수) 오후
-                      5시, 대구미술관 강당에서 시상식을 가졌다.
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-                <li class="swiper-slide">
-                  <div class="news_img">
-                    <img src="./img/새소식02.jpg" alt="새소식02" />
-                  </div>
-                  <div class="text">
-                    <p class="news_title">3년 만에 만나는 대구미술관 가정의 달 행사“놀자, 뛰자, 웃자.”</p>
-                    <p class="news_desc">
-                      대구미술관(최은주 관장)은 전시, 공연, 워크숍 등 온 가족이 즐길 수 있는 가정의 달 이벤트 “놀자, 뛰자, 웃자”를 기획해 5월
-                      3일(화)부터 15일(일)까지 대구미술관 어미홀 및 외부 수변공간에서 선보였다.
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-                <li class="swiper-slide">
-                  <div class="news_img">
-                    <img src="./img/새소식03.jpg" alt="새소식03" />
-                  </div>
-                  <div class="text">
-                    <p class="news_title">대구미술관,“관장과 함께 보는 다니엘 뷔렌展”</p>
-                    <p class="news_desc">
-                      대구미술관에서 진행 중인 세계적인 조형 예술가 다니엘 뷔렌 (Daniel Buren, 1938-)의 개인전에 개막 18일 (7.12. ~ 7.31, 매주 월요일
-                      휴관) 20,841명의 관람객이 다녀가는 등 초반부터 관심이 뜨겁다.
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-              </ul>
-              <div class="swiper-button-next news_next"></div>
-              <div class="swiper-button-prev news_prev"></div>
-            </article>
-            <a href="#1">&#43; 더보기</a>
+      <!-- 헤더 시작 -->
+      <header>
+        <div class="hd_top mw">
+          <div class="hd_logo">
+            <h1>
+              <a href="#" class="top_logo"><img src="./img/top_logo.svg" alt="logo" /></a>
+              <a href="#" class="m_top_logo"><img src="./img/m_top_logo.svg" alt="symbol" /></a>
+            </h1>
           </div>
-          <!-- Swiper -->
-          <div class="notice_wrap">
-            <article class="swiper notice_list">
-              <h3 hidden>공지사항</h3>
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <div class="notice_img">
-                    <img src="./img/공지사항01.jpg" alt="공지사항01" />
-                  </div>
-                  <div class="text">
-                    <p class="notice_title">도슨트 전시해설 안내(11.8.~12.31.)</p>
-                    <p class="notice_desc">
-                      <span>작품 감상의 편의제공을 위하여 도슨트 전시해설 프로그램을 다음과 같이 운영하오니많은 관심과 참여를 바랍니다.</span>
-                      <span>운영일정 : 평일 및 주말 1일 3회(11시, 14시, 16시), 회차별 50분정도 <br />※ 휴관일 제외</span>
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-                <li class="swiper-slide">
-                  <div class="notice_img">
-                    <img src="./img/공지사항02.jpg" alt="공지사항02" />
-                  </div>
-                  <div class="text">
-                    <p class="notice_title">대구미술관 동절기 운영시간 안내(11월~3월)</p>
-                    <p class="notice_desc">
-                      <span
-                        >11월 1일부터 대구미술관 운영시간이 변경됩니다. 동절기인 11월 ~ 다음해 3월까지는 오전 10시 ~ 오후 6시까지 개관합니다.</span
-                      >
-                      <span>아울러 매주 월요일은 휴관일입니다.<br />※ 월요일이 공휴일일 경우 그 다음 평일이 휴관일입니다.</span>
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-                <li class="swiper-slide">
-                  <div class="notice_img">
-                    <img src="./img/공지사항03.jpg" alt="공지사항03" />
-                  </div>
-                  <div class="text">
-                    <p class="notice_title">10월 9일 한글날 정상개관 및 대체휴관 안내</p>
-                    <p class="notice_desc">
-                      <span>대구미술관은 10월 9일(일) 한글날, 10월 10일(월) 대체휴무일 모두 정상 개관합니다.</span>
-                      <span>10월 11일(화)은 미술관 운영 방침에 따라 대체 휴관하오니 참고바랍니다. </span>
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-              </ul>
-              <div class="swiper-button-next notice_next"></div>
-              <div class="swiper-button-prev notice_prev"></div>
-            </article>
-            <a href="#2">&#43; 더보기</a>
+          <div class="lang">
+            <button>KOR ▽</button>
+            <ul>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">CN</a></li>
+              <li><a href="#">JP</a></li>
+            </ul>
           </div>
-          <!-- Swiper -->
-          <div class="media_wrap">
-            <article class="swiper media_list">
-              <h3 hidden>보도자료</h3>
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <div class="media_img">
-                    <img src="./img/보도자료01.jpg" alt="보도자료01" />
-                  </div>
-                  <div class="text">
-                    <p class="media_title">2022년 대구미술관 소장품 수집, 4월 8일까지 접수</p>
-                    <p class="media_desc">
-                      대구미술관(관장 최은주)은 대구미술관의 정체성에 부합하고 미술사적 가치가높은 작품 수집을 위해 2022년 대구미술관 소장품 수집
-                      계획을 공고하고, 4월8일(금)까지 접수 받는다.
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-                <li class="swiper-slide">
-                  <div class="media_img">
-                    <img src="./img/보도자료02.jpg" alt="보도자료02" />
-                  </div>
-                  <div class="text">
-                    <p class="media_title">2023 다티스트(DArtist) 수상자, 김영진(1946) 작가</p>
-                    <p class="media_desc">
-                      대구미술관(관장 최은주)은 다티스트 심사위원회 개최 결과, 김영진(1946)을 2023년 다티스트 작가로 선정하고, 이듬해 대구미술관에서
-                      개인전을 개최한다.
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-                <li class="swiper-slide">
-                  <div class="media_img">
-                    <img src="./img/보도자료03.jpg" alt="보도자료03" />
-                  </div>
-                  <div class="text">
-                    <p class="media_title">세계적 조형 예술가 다니엘 뷔렌, 대구에!</p>
-                    <p class="media_desc">
-                      대구미술관(관장 최은주)은 7월 12일(화)부터 2023년 1월 29일(일)까지 프랑스 출신의 세계적인 조형 예술가 다니엘 뷔렌 (Daniel Buren,
-                      1938-)의개인전을 대구미술관 1전시실과 어미홀에서 개최한다.
-                    </p>
-                  </div>
-                  <a href="#" title="자세히보기"></a>
-                </li>
-              </ul>
-              <div class="swiper-button-next media_next"></div>
-              <div class="swiper-button-prev media_prev"></div>
-            </article>
-            <a href="#3">&#43; 더보기</a>
+          <div class="ham">
+            <span class="line_bar"></span>
+            <span class="line_bar"></span>
+            <span class="line_bar"></span>
           </div>
         </div>
-      </article>
-      <article class="side_banner">
-        <h2 hidden>사이드배너</h2>
-        <div class="edu_banner"><img src="./img/edu01.jpg" alt="교육01" /></div>
-        <div class="event_banner"><img src="./img/event01.jpg" alt="이벤트01" /></div>
-      </article>
-    </section>
+        <div class="hd_bottom">
+          <nav>
+            <ul class="gnb mw">
+              <li>
+                <a href="">전시</a>
+                <ul class="sub">
+                  <li><a href="#">현재전시</a></li>
+                  <li><a href="#">지난전시</a></li>
+                  <li><a href="#">예정전시</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">교육 및 행사</a>
+                <ul class="sub">
+                  <li><a href="#">렉쳐</a></li>
+                  <li><a href="#">전시연계</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">소장품</a>
+                <ul class="sub">
+                  <li><a href="#">소장품 검색</a></li>
+                  <li><a href="#">이건희 컬렉션</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">디지털 미술관</a>
+                <ul class="sub">
+                  <li><a href="#">디지털 미술관</a></li>
+                  <li><a href="#">미술 정보 센터</a></li>
+                  <li><a href="#">아카이브실</a></li>
+                  <li><a href="#">디지털 가상공간</a></li>
+                  <li><a href="#">사진자료</a></li>
+                  <li><a href="#">발간자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">미술상</a>
+                <ul class="sub">
+                  <li><a href="#">이인성미술상</a></li>
+                  <li><a href="#">정점식미술상</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">커뮤니티</a>
+                <ul class="sub">
+                  <li><a href="#">게시판</a></li>
+                  <li><a href="#">관람후기</a></li>
+                  <li><a href="#">네트워크</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">공지사항</a>
+                <ul class="sub">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">새 소식</a></li>
+                  <li><a href="#">메일링 서비스</a></li>
+                  <li><a href="#">보도자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">미술관 소개</a>
+                <ul class="sub">
+                  <li><a href="#">대구미술관</a></li>
+                  <li><a href="#">관람안내</a></li>
+                  <li><a href="#">오시는길</a></li>
+                  <li><a href="#">서포터즈</a></li>
+                  <li><a href="#">구성원</a></li>
+                  <li><a href="#">시설안내</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="sec1">
+        <!-- Swiper -->
+        <article class="swiper main_banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="./img/main_01.jpg" alt="main01" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="./img/main_02.jpg" alt="main02" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="./img/main_03.jpg" alt="main03" /></a>
+            </div>
+          </div>
+          <div class="swiper-pagination main_banner_pg"></div>
+        </article>
+        <div class="guide">
+          <div class="open">
+            <strong>대구미술관 관람시간 안내</strong>
+            <p>
+              <span>하절기(4월 ~ 10월) : 오전 10시~오후 7시</span>
+              <span>동절기(11월 ~ 3월) : 오전 10시~오후 6시</span>
+            </p>
+            <a href="#" title="자세히보기"></a>
+          </div>
+          <div class="reservation">
+            <p>
+              <strong>단체 관람 예약</strong>
+              <span>20인이상 단체는 반드시 예약 후 방문해 주시기 바랍니다.</span>
+              <span>※ 미예약 방문단체는 당일 전시장 관람가능인원 초과시 입장이 불가능 할 수 있습니다.</span>
+            </p>
+            <a href="#" title="자세히보기"></a>
+          </div>
+        </div>
+      </section>
 
-    <section class="sec3">
-      <article class="mw">
-        <h2 hidden>미술상</h2>
+      <section class="sec2 mw">
+        <article class="tab_con">
+          <h2 hidden>게시판</h2>
+          <div class="tab_btns">
+            <button class="on">새 소식</button>
+            <button>공지사항</button>
+            <button>보도자료</button>
+          </div>
+          <div class="card_con">
+            <!-- Swiper -->
+            <div class="news_wrap on">
+              <article class="swiper news_list">
+                <h3 hidden>새 소식</h3>
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="news_img">
+                      <img src="./img/새소식01.jpg" alt="새소식01" />
+                    </div>
+                    <div class="text">
+                      <p class="news_title">대구미술관 ‘제1회 정점식미술상’시상식 성황리 개최</p>
+                      <p class="news_desc">
+                        대구미술관(관장 최은주)은 미술사가 양은희(梁恩姬, 1965년 제주 출생)를 ‘제1회 정점식미술상’ 수상자로 선정하고, 6월 15일(수)
+                        오후 5시, 대구미술관 강당에서 시상식을 가졌다.
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="news_img">
+                      <img src="./img/새소식02.jpg" alt="새소식02" />
+                    </div>
+                    <div class="text">
+                      <p class="news_title">3년 만에 만나는 대구미술관 가정의 달 행사“놀자, 뛰자, 웃자.”</p>
+                      <p class="news_desc">
+                        대구미술관(최은주 관장)은 전시, 공연, 워크숍 등 온 가족이 즐길 수 있는 가정의 달 이벤트 “놀자, 뛰자, 웃자”를 기획해 5월
+                        3일(화)부터 15일(일)까지 대구미술관 어미홀 및 외부 수변공간에서 선보였다.
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="news_img">
+                      <img src="./img/새소식03.jpg" alt="새소식03" />
+                    </div>
+                    <div class="text">
+                      <p class="news_title">대구미술관,“관장과 함께 보는 다니엘 뷔렌展”</p>
+                      <p class="news_desc">
+                        대구미술관에서 진행 중인 세계적인 조형 예술가 다니엘 뷔렌 (Daniel Buren, 1938-)의 개인전에 개막 18일 (7.12. ~ 7.31, 매주
+                        월요일 휴관) 20,841명의 관람객이 다녀가는 등 초반부터 관심이 뜨겁다.
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                </ul>
+                <div class="swiper-button-next news_next"></div>
+                <div class="swiper-button-prev news_prev"></div>
+              </article>
+              <a href="#1">&#43; 더보기</a>
+            </div>
+            <!-- Swiper -->
+            <div class="notice_wrap">
+              <article class="swiper notice_list">
+                <h3 hidden>공지사항</h3>
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="notice_img">
+                      <img src="./img/공지사항01.jpg" alt="공지사항01" />
+                    </div>
+                    <div class="text">
+                      <p class="notice_title">도슨트 전시해설 안내(11.8.~12.31.)</p>
+                      <p class="notice_desc">
+                        <span>작품 감상의 편의제공을 위하여 도슨트 전시해설 프로그램을 다음과 같이 운영하오니많은 관심과 참여를 바랍니다.</span>
+                        <span>운영일정 : 평일 및 주말 1일 3회(11시, 14시, 16시), 회차별 50분정도 <br />※ 휴관일 제외</span>
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="notice_img">
+                      <img src="./img/공지사항02.jpg" alt="공지사항02" />
+                    </div>
+                    <div class="text">
+                      <p class="notice_title">대구미술관 동절기 운영시간 안내(11월~3월)</p>
+                      <p class="notice_desc">
+                        <span
+                          >11월 1일부터 대구미술관 운영시간이 변경됩니다. 동절기인 11월 ~ 다음해 3월까지는 오전 10시 ~ 오후 6시까지 개관합니다.</span
+                        >
+                        <span>아울러 매주 월요일은 휴관일입니다.<br />※ 월요일이 공휴일일 경우 그 다음 평일이 휴관일입니다.</span>
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="notice_img">
+                      <img src="./img/공지사항03.jpg" alt="공지사항03" />
+                    </div>
+                    <div class="text">
+                      <p class="notice_title">10월 9일 한글날 정상개관 및 대체휴관 안내</p>
+                      <p class="notice_desc">
+                        <span>대구미술관은 10월 9일(일) 한글날, 10월 10일(월) 대체휴무일 모두 정상 개관합니다.</span>
+                        <span>10월 11일(화)은 미술관 운영 방침에 따라 대체 휴관하오니 참고바랍니다. </span>
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                </ul>
+                <div class="swiper-button-next notice_next"></div>
+                <div class="swiper-button-prev notice_prev"></div>
+              </article>
+              <a href="#2">&#43; 더보기</a>
+            </div>
+            <!-- Swiper -->
+            <div class="media_wrap">
+              <article class="swiper media_list">
+                <h3 hidden>보도자료</h3>
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="media_img">
+                      <img src="./img/보도자료01.jpg" alt="보도자료01" />
+                    </div>
+                    <div class="text">
+                      <p class="media_title">2022년 대구미술관 소장품 수집, 4월 8일까지 접수</p>
+                      <p class="media_desc">
+                        대구미술관(관장 최은주)은 대구미술관의 정체성에 부합하고 미술사적 가치가높은 작품 수집을 위해 2022년 대구미술관 소장품 수집
+                        계획을 공고하고, 4월8일(금)까지 접수 받는다.
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="media_img">
+                      <img src="./img/보도자료02.jpg" alt="보도자료02" />
+                    </div>
+                    <div class="text">
+                      <p class="media_title">2023 다티스트(DArtist) 수상자, 김영진(1946) 작가</p>
+                      <p class="media_desc">
+                        대구미술관(관장 최은주)은 다티스트 심사위원회 개최 결과, 김영진(1946)을 2023년 다티스트 작가로 선정하고, 이듬해 대구미술관에서
+                        개인전을 개최한다.
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="media_img">
+                      <img src="./img/보도자료03.jpg" alt="보도자료03" />
+                    </div>
+                    <div class="text">
+                      <p class="media_title">세계적 조형 예술가 다니엘 뷔렌, 대구에!</p>
+                      <p class="media_desc">
+                        대구미술관(관장 최은주)은 7월 12일(화)부터 2023년 1월 29일(일)까지 프랑스 출신의 세계적인 조형 예술가 다니엘 뷔렌 (Daniel
+                        Buren, 1938-)의개인전을 대구미술관 1전시실과 어미홀에서 개최한다.
+                      </p>
+                    </div>
+                    <a href="#" title="자세히보기"></a>
+                  </li>
+                </ul>
+                <div class="swiper-button-next media_next"></div>
+                <div class="swiper-button-prev media_prev"></div>
+              </article>
+              <a href="#3">&#43; 더보기</a>
+            </div>
+          </div>
+        </article>
+        <article class="side_banner">
+          <h2 hidden>사이드배너</h2>
+          <div class="edu_banner">
+            <a href="#"><img src="./img/edu01.jpg" alt="교육01" /></a>
+          </div>
+          <div class="event_banner">
+            <a href="#"><img src="./img/event01.jpg" alt="이벤트01" /></a>
+          </div>
+        </article>
+      </section>
+
+      <section class="sec3">
+        <article class="mw">
+          <h2 hidden>미술상</h2>
+          <div>
+            <a href="#"><img src="./img/art_prize01.jpg" alt="이인성미술상" /></a>
+          </div>
+          <div>
+            <a href="#"><img src="./img/art_prize02.jpg" alt="정점식미술상" /></a>
+          </div>
+        </article>
+      </section>
+
+      <section class="sec4 mw">
+        <div class="video_desc">
+          <h2>디지털 미술관</h2>
+          <strong>360 VR 전시 투어</strong>
+        </div>
+        <div class="video_wrap">
+          <div class="swiper digital_museum_slide">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <p>디지털 가상체험관 〈몰입〉 VR - 서병오 ‘마음을 담은 풍경'</p>
+                <iframe
+                  width="1072"
+                  height="600"
+                  src="https://www.youtube.com/embed/wxlknXZlpVg"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="swiper-slide">
+                <p>강요배 : 카네이션 - 마음이 몸이 될 때</p>
+                <iframe
+                  width="1072"
+                  height="600"
+                  src="https://www.youtube.com/embed/DkfA0UEq1AU"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+              <li class="swiper-slide">
+                <p>대구포럼Ⅰ : 시를 위한 놀이터</p>
+                <iframe
+                  width="1072"
+                  height="600"
+                  src="https://www.youtube.com/embed/GAA7ScpRvog"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-next digital_museum_next"></div>
+          <div class="swiper-button-prev digital_museum_prev"></div>
+        </div>
+        <a href="#">더 보러 가기</a>
+      </section>
+
+      <section class="sec5">
+        <h2 class="mw">소장품</h2>
+        <!-- 소장품 flow 기능 -->
         <div>
-          <a href="#"><img src="./img/art_prize01.jpg" alt="이인성미술상" /></a>
-        </div>
-        <div>
-          <a href="#"><img src="./img/art_prize02.jpg" alt="정점식미술상" /></a>
-        </div>
-      </article>
-    </section>
-
-    <section class="sec4 mw">
-      <div class="video_desc">
-        <h2>디지털 미술관</h2>
-        <strong>360 VR 전시 투어</strong>
-      </div>
-      <div class="video_wrap">
-        <div class="swiper digital_museum_slide">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <p>디지털 가상체험관 〈몰입〉 VR - 서병오 ‘마음을 담은 풍경'</p>
-              <video loop src="./img/vr01.mp4" muted poster="./img/VR01.jpg"></video>
+          <ul class="collection">
+            <li>
+              <a href="#"><img src="./img/collection/collect01.jpg" alt="collection01" /></a>
             </li>
-            <li class="swiper-slide">
-              <p>강요배 : 카네이션 - 마음이 몸이 될 때</p>
-              <video loop src="./img/vr02.mp4" muted poster="./img/VR02.jpg"></video>
+            <li>
+              <a href="#"><img src="./img/collection/collect02.jpg" alt="collection02" /></a>
             </li>
-            <li class="swiper-slide">
-              <p>대구포럼 : 시를 위한 놀이터</p>
-              <video loop src="./img/vr03.mp4" muted poster="./img/VR03.jpg"></video>
+            <li>
+              <a href="#"><img src="./img/collection/collect03.jpg" alt="collection03" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect04.jpg" alt="collection04" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect05.jpg" alt="collection05" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect06.jpg" alt="collection06" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect07.jpg" alt="collection07" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect08.jpg" alt="collection08" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect09.jpg" alt="collection09" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect10.jpg" alt="collection10" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect11.jpg" alt="collection11" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect12.jpg" alt="collection12" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect13.jpg" alt="collection13" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect14.jpg" alt="collection14" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect15.jpg" alt="collection15" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect16.jpg" alt="collection16" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect17.jpg" alt="collection17" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect18.jpg" alt="collection18" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/collection/collect19.jpg" alt="collection19" /></a>
             </li>
           </ul>
         </div>
-        <div class="swiper-button-next digital_museum_next"></div>
-        <div class="swiper-button-prev digital_museum_prev"></div>
-      </div>
-      <a href="#">더 보러 가기</a>
-    </section>
+        <a href="#">더 보러 가기</a>
+      </section>
 
-    <section class="sec5">
-      <h2 class="mw">소장품</h2>
-      <!-- 소장품 flow 기능 -->
-      <div>
-        <ul class="collection">
-          <li>
-            <a href="#"><img src="./img/collection/collect01.jpg" alt="collection01" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect02.jpg" alt="collection02" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect03.jpg" alt="collection03" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect04.jpg" alt="collection04" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect05.jpg" alt="collection05" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect06.jpg" alt="collection06" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect07.jpg" alt="collection07" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect08.jpg" alt="collection08" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect09.jpg" alt="collection09" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect10.jpg" alt="collection10" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect11.jpg" alt="collection11" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect12.jpg" alt="collection12" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect13.jpg" alt="collection13" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect14.jpg" alt="collection14" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect15.jpg" alt="collection15" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect16.jpg" alt="collection16" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect17.jpg" alt="collection17" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect18.jpg" alt="collection18" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./img/collection/collect19.jpg" alt="collection19" /></a>
-          </li>
-        </ul>
-      </div>
-      <a href="#">더 보러 가기</a>
-    </section>
-
-    <footer>
-      <div class="footer_wrap mw">
-        <div class="footer_left">
-          <a href="#">이용약관</a>
-          <a href="#">개인정보처리방침</a>
-          <a href="#">오시는길</a>
-          <address>
-            <span> 대구광역시 수성구 미술관로 40(삼덕동) 우편번호 42250</span>
-            <strong>대표전화: </strong>
-            <span>&#43;82 53 803 7900</span>
-            <strong>팩스: </strong>
-            <span>&#43;82 53 803 7859</span>
-          </address>
+      <footer>
+        <div class="footer_wrap mw">
+          <div class="footer_left">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">오시는길</a>
+            <address>
+              <span> 대구광역시 수성구 미술관로 40(삼덕동) 우편번호 42250</span>
+              <strong>대표전화: </strong>
+              <span>&#43;82 53 803 7900</span>
+              <strong>팩스: </strong>
+              <span>&#43;82 53 803 7859</span>
+            </address>
+          </div>
+          <div class="sns_icon">
+            <p>
+              <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            </p>
+            <p>
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </p>
+            <p>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </p>
+          </div>
         </div>
-        <div class="sns_icon">
-          <p>
-            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-          </p>
-          <p>
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-          </p>
-          <p>
-            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-          </p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </main>
   </body>
 </html>

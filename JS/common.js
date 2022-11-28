@@ -5,6 +5,19 @@ $lang.addEventListener("click", function () {
   $langList.classList.toggle("on");
 });
 
+// 햄버거 버튼
+const $btnHam = document.querySelector(".ham"),
+  $megaBg = document.querySelector(".mega_bg"),
+  $hamGnb = document.querySelector(".ham_gnb");
+
+$btnHam.addEventListener("click", function () {
+  this.classList.toggle("on");
+  $megaBg.classList.toggle("on");
+  setTimeout(function () {
+    $hamGnb.classList;
+  });
+});
+
 // sec1 메인배너 슬라이드
 var mainBannerSl = new Swiper(".main_banner", {
   autoplay: {
@@ -44,8 +57,27 @@ function cardOn(num1) {
 
 // sec2 새소식 슬라이드
 var newsSl = new Swiper(".news_list", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    // 나중에 반응형 하면서 포인트 값 수정할 것
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1500: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
   navigation: {
     nextEl: ".news_next",
     prevEl: ".news_prev",
@@ -100,43 +132,44 @@ var youtubeSl = new Swiper(".digital_museum_slide", {
 });
 
 //sec4 디지털 미술관 동영상 클릭시 play
-const $vidList = document.querySelectorAll(".digital_museum_slide li"),
-  $btnNext = document.querySelector(".digital_museum_next"),
-  $btnPrev = document.querySelector(".digital_museum_prev"),
-  $stop = document.querySelectorAll(".digital_museum_slide li video");
-let vidToggle = 0;
-console.log($vidList);
-console.log($stop);
+// iframe 사용으로 일단 보류
+// const $vidList = document.querySelectorAll(".digital_museum_slide li"),
+//   $btnNext = document.querySelector(".digital_museum_next"),
+//   $btnPrev = document.querySelector(".digital_museum_prev"),
+//   $stop = document.querySelectorAll(".digital_museum_slide li video");
+// let vidToggle = 0;
+// console.log($vidList);
+// console.log($stop);
 
-$vidList.forEach(function (item, idx) {
-  item.addEventListener("click", function () {
-    let vidPlay = this.childNodes[3];
-    if (vidToggle == 0) {
-      vidPlay.play();
-      vidToggle = 1;
-      // console.log(vidPlay);
-      // console.log(vidToggle);
-    } else {
-      if (vidToggle == 1) {
-        vidPlay.pause();
-        vidToggle = 0;
-        // console.log(vidPlay);
-        // console.log(vidToggle);
-      }
-    }
-  });
-});
+// $vidList.forEach(function (item, idx) {
+//   item.addEventListener("click", function () {
+//     let vidPlay = this.childNodes[3];
+//     if (vidToggle == 0) {
+//       vidPlay.play();
+//       vidToggle = 1;
+//       console.log(vidPlay);
+//       console.log(vidToggle);
+//     } else {
+//       if (vidToggle == 1) {
+//         vidPlay.pause();
+//         vidToggle = 0;
+//         console.log(vidPlay);
+//         console.log(vidToggle);
+//       }
+//     }
+//   });
+// });
 
-$btnNext.addEventListener("click", function () {
-  $stop.forEach(function (item, idx) {
-    item.pause();
-    vidToggle = 0;
-  });
-});
+// $btnNext.addEventListener("click", function () {
+//   $stop.forEach(function (item, idx) {
+//     item.pause();
+//     vidToggle = 0;
+//   });
+// });
 
-$btnPrev.addEventListener("click", function () {
-  $stop.forEach(function (item, idx) {
-    item.pause();
-    vidToggle = 0;
-  });
-});
+// $btnPrev.addEventListener("click", function () {
+//   $stop.forEach(function (item, idx) {
+//     item.pause();
+//     vidToggle = 0;
+//   });
+// });
