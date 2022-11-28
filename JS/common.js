@@ -8,14 +8,26 @@ $lang.addEventListener("click", function () {
 // 햄버거 버튼
 const $btnHam = document.querySelector(".ham"),
   $megaBg = document.querySelector(".mega_bg"),
-  $hamGnb = document.querySelector(".ham_gnb");
+  $hamGnb = document.querySelector(".ham_gnb"),
+  $hamLang = document.querySelector(".ham_lang");
 
 $btnHam.addEventListener("click", function () {
+  if ($hamLangList.classList.contains("sl_toggle")) {
+    $hamLangList.classList.remove("sl_toggle");
+  }
   this.classList.toggle("on");
   $megaBg.classList.toggle("on");
   setTimeout(function () {
-    $hamGnb.classList;
-  });
+    $hamGnb.classList.toggle("on");
+    $hamLang.classList.toggle("on");
+  }, 200);
+  document.body.classList.toggle("scroll_lock");
+});
+
+//햄버거 lnag 버튼
+const $hamLangList = document.querySelector(".ham_lang ul");
+$hamLang.addEventListener("click", function () {
+  $hamLangList.classList.toggle("sl_toggle");
 });
 
 // sec1 메인배너 슬라이드
@@ -60,7 +72,6 @@ var newsSl = new Swiper(".news_list", {
   slidesPerView: 1,
   spaceBetween: 10,
   breakpoints: {
-    // 나중에 반응형 하면서 포인트 값 수정할 것
     500: {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -86,8 +97,26 @@ var newsSl = new Swiper(".news_list", {
 
 // sec2 공지사항 슬라이드
 var noticeSl = new Swiper(".notice_list", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1500: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
   navigation: {
     nextEl: ".notice_next",
     prevEl: ".notice_prev",
@@ -96,8 +125,26 @@ var noticeSl = new Swiper(".notice_list", {
 
 // sec2 보도자료 슬라이드
 var mediaSl = new Swiper(".media_list", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1500: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
   navigation: {
     nextEl: ".media_next",
     prevEl: ".media_prev",
@@ -105,6 +152,7 @@ var mediaSl = new Swiper(".media_list", {
 });
 
 //sec4 디지털 미술관 동영상 슬라이드
+
 var youtubeSl = new Swiper(".digital_museum_slide", {
   initialSlide: 1,
   effect: "coverflow",
@@ -112,15 +160,13 @@ var youtubeSl = new Swiper(".digital_museum_slide", {
   centeredSlides: true,
   slidesPerView: 1,
   breakpoints: {
-    // 나중에 반응형 하면서 포인트 값 수정할 것
-    400: {
+    700: {
       slidesPerView: "auto",
-      spaceBetween: 50,
     },
   },
   coverflowEffect: {
     rotate: 0,
-    stretch: 300,
+    stretch: 200,
     depth: 100,
     modifier: 1.5,
     slideShadows: false,
@@ -133,43 +179,43 @@ var youtubeSl = new Swiper(".digital_museum_slide", {
 
 //sec4 디지털 미술관 동영상 클릭시 play
 // iframe 사용으로 일단 보류
-// const $vidList = document.querySelectorAll(".digital_museum_slide li"),
-//   $btnNext = document.querySelector(".digital_museum_next"),
-//   $btnPrev = document.querySelector(".digital_museum_prev"),
-//   $stop = document.querySelectorAll(".digital_museum_slide li video");
-// let vidToggle = 0;
+const $vidList = document.querySelectorAll(".digital_museum_slide li"),
+  $btnNext = document.querySelector(".digital_museum_next"),
+  $btnPrev = document.querySelector(".digital_museum_prev"),
+  $stop = document.querySelectorAll(".digital_museum_slide li video");
+let vidToggle = 0;
 // console.log($vidList);
 // console.log($stop);
 
-// $vidList.forEach(function (item, idx) {
-//   item.addEventListener("click", function () {
-//     let vidPlay = this.childNodes[3];
-//     if (vidToggle == 0) {
-//       vidPlay.play();
-//       vidToggle = 1;
-//       console.log(vidPlay);
-//       console.log(vidToggle);
-//     } else {
-//       if (vidToggle == 1) {
-//         vidPlay.pause();
-//         vidToggle = 0;
-//         console.log(vidPlay);
-//         console.log(vidToggle);
-//       }
-//     }
-//   });
-// });
+$vidList.forEach(function (item, idx) {
+  item.addEventListener("click", function () {
+    let vidPlay = this.childNodes[3];
+    if (vidToggle == 0) {
+      vidPlay.play();
+      vidToggle = 1;
+      // console.log(vidPlay);
+      // console.log(vidToggle);
+    } else {
+      if (vidToggle == 1) {
+        vidPlay.pause();
+        vidToggle = 0;
+        // console.log(vidPlay);
+        // console.log(vidToggle);
+      }
+    }
+  });
+});
 
-// $btnNext.addEventListener("click", function () {
-//   $stop.forEach(function (item, idx) {
-//     item.pause();
-//     vidToggle = 0;
-//   });
-// });
+$btnNext.addEventListener("click", function () {
+  $stop.forEach(function (item, idx) {
+    item.pause();
+    vidToggle = 0;
+  });
+});
 
-// $btnPrev.addEventListener("click", function () {
-//   $stop.forEach(function (item, idx) {
-//     item.pause();
-//     vidToggle = 0;
-//   });
-// });
+$btnPrev.addEventListener("click", function () {
+  $stop.forEach(function (item, idx) {
+    item.pause();
+    vidToggle = 0;
+  });
+});

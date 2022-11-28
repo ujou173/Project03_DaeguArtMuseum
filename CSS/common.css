@@ -45,6 +45,10 @@ main {
   overflow: hidden;
 }
 
+.scroll_lock {
+  overflow-y: hidden;
+}
+
 /* 햄버거 버튼 모달--------------------------------------------------------------------- */
 /* 메가메뉴 형식 */
 .mega_bg {
@@ -58,26 +62,132 @@ main {
   pointer-events: none;
   transform: scale(0);
   transition: var(--speed_05);
+  z-index: 999;
 }
 
 .mega_bg.on {
-  transform: scale(20);
-}
-
-.hd_ham {
-  /* display: none; */
+  transform: scale(30);
 }
 
 .ham_gnb {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
+  /* border: 1px solid red; */
+  /* display: flex; */
+  display: none;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+.ham_gnb.on {
+  display: flex;
+}
+
+.ham_gnb > li {
+  /* border: 1px solid green; */
+  width: 100%;
+  /* text-align: center; */
+}
+
+.ham_gnb > li > a {
+  color: var(--color_main_03);
+  width: 100%;
+  /* border: 1px solid red; */
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.ham_gnb > li > a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  /* border-radius: 50%; */
+  background-color: var(--color_white);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.ham_gnb > li:hover > a::before {
+  background-color: var(--color_light_gray);
 }
 
 .ham_gnb .ham_sub {
+  /* display: none; */
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  /* border: 1px solid lavender; */
+  word-break: keep-all;
+  padding-bottom: 1rem;
+}
+
+.ham_gnb .ham_sub a {
+  padding-right: 0.5rem;
+  color: white;
+  opacity: 0.5;
+}
+
+.ham_gnb .ham_sub a:hover {
+  opacity: 1;
+}
+
+.ham_lang {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  text-align: center;
   display: none;
+}
+
+.ham_lang.on {
+  display: block;
+}
+
+.ham_lang button {
+  background-color: transparent;
+  border: 1px solid var(--color_white);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--font_size_H4_16pt);
+  font-family: var(--font_NanumSquareNeo);
+  color: var(--color_white);
+}
+
+.ham_lang ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  /* border: 1px solid red; */
+}
+
+.ham_lang ul.sl_toggle {
+  display: block;
+}
+
+.ham_lang ul a {
+  color: var(--color_white);
+  font-size: var(--font_size_H4_16pt);
+  font-family: var(--font_NanumSquareNeo);
+  opacity: 0.5;
+}
+
+.ham_lang ul a:hover {
+  opacity: 1;
 }
 
 /* 햄버거 버튼 모달 END------------------------------------------------------------------ */
@@ -103,6 +213,13 @@ main {
   border-radius: 2px;
   background-color: var(--color_dark_gray);
   transition: var(--speed_05);
+}
+
+.ham.on {
+  border: 1px solid var(--color_white);
+}
+.ham.on span {
+  background-color: var(--color_white);
 }
 
 .ham span:nth-of-type(1) {
@@ -200,6 +317,8 @@ main {
 .hd_top .lang li a {
   width: 100%;
   text-align: center;
+  font-size: var(--font_size_H4_16pt);
+  font-family: var(--font_NanumSquareNeo);
 }
 
 .hd_bottom {
@@ -466,7 +585,7 @@ main {
 /* sec2 start */
 
 .sec2 {
-  margin-top: 5rem;
+  margin-top: 5%;
   margin-bottom: 2.5rem;
   display: flex;
   /* border: 1px solid green; */
@@ -709,7 +828,7 @@ main {
 /* sec4 start */
 
 .sec4 {
-  margin-top: 5rem;
+  margin-top: 5%;
   margin-bottom: 5rem;
   text-align: center;
 }
@@ -754,18 +873,29 @@ main {
   width: 80%;
 }
 
+.sec4 .digital_museum_slide li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .sec4 .digital_museum_slide li p {
   font-size: var(--font_size_b1_24pt);
   font-family: var(--font_Pretendard);
   color: black;
   opacity: 0;
   padding-bottom: 2rem;
-  transition: var(--speed_05);
-  transition-delay: var(--speed_03);
+  transition: opacity var(--speed_05);
+  transition-delay: opacity var(--speed_03);
 }
 
 .sec4 .digital_museum_slide li.swiper-slide-active p {
   opacity: 1;
+}
+
+.sec4 .digital_museum_slide video {
+  width: 80%;
 }
 
 .sec4 .digital_museum_next,
@@ -930,6 +1060,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  word-break: keep-all;
 }
 
 .footer_left {
@@ -954,11 +1085,16 @@ footer {
 
 .footer_left address {
   display: flex;
+  padding: 0 0 0 1rem;
 }
 
 .footer_left address span {
   padding-right: 2rem;
   position: relative;
+}
+
+.footer_left address span:last-of-type {
+  padding-right: 0;
 }
 
 .footer_left address span::after {
@@ -995,11 +1131,32 @@ footer {
   margin-left: 2rem;
 }
 
+.footer_wrap .sns_icon p:first-of-type {
+  margin-left: 0;
+}
+
 /* footer end */
 
 /* @media */
 
 @media (max-width: 1500px) {
+  .sec4 .video_desc h2::before,
+  .sec4 .video_desc h2::after,
+  .sec5 h2::before,
+  .sec5 h2::after {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1335px) {
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .sns_icon p {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
 }
 
 @media (max-width: 1150px) {
@@ -1049,6 +1206,11 @@ footer {
   }
 }
 
+@media (max-width: 1070px) {
+  /* 푸터 주소,전화,팩스를 display block으로 만들어서 wrap 처리하면 될 듯 */
+  /* 아니면 adress 자체를 block으로 해서 밑으로 내리던가 */
+}
+
 @media (max-width: 935px) {
   .sec1 .guide strong {
     padding-bottom: 0.25rem;
@@ -1066,6 +1228,32 @@ footer {
   .sec1 .open span {
     display: inline-block;
     padding: 0.25rem 0 0;
+  }
+
+  .sec4 .video_desc h2::before,
+  .sec4 .video_desc h2::after,
+  .sec5 h2::before,
+  .sec5 h2::after {
+    width: 28%;
+  }
+
+  .sec4 .video_desc strong {
+    font-size: var(--font_size_b2_16pt);
+  }
+
+  .sec4 .digital_museum_slide li p {
+    font-size: var(--font_size_b2_16pt);
+  }
+
+  .footer_wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer_left {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -1122,6 +1310,38 @@ footer {
   .sec2 .card_con > div > a {
     font-size: 1rem;
   }
+
+  .sec2 .card_con > div > article > div::after {
+    font-size: 2rem;
+  }
+
+  .sec3 article {
+    flex-direction: column;
+  }
+
+  .sec3 article > div {
+    width: 100%;
+    padding-top: 44%;
+  }
+
+  .sec4 .video_desc h2,
+  .sec5 h2 {
+    font-size: var(--font_size_H2_32pt);
+  }
+
+  .sec4 .digital_museum_slide video {
+    width: 100%;
+  }
+
+  .sec4 .digital_museum_next,
+  .sec4 .digital_museum_prev {
+    top: 70%;
+  }
+
+  .sec4 .digital_museum_next::after,
+  .sec4 .digital_museum_prev::after {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1132,6 +1352,14 @@ footer {
 
   .sec2 .card_con > div > a {
     font-size: 0.8rem;
+  }
+
+  .sec2 .card_con > div li {
+    margin-top: 0;
+  }
+
+  .sec2 .card_con article {
+    border-top: none;
   }
 
   .sec2 .card_con > div li > div:first-of-type {
@@ -1149,7 +1377,36 @@ footer {
   }
 
   .sec2 .side_banner div:first-of-type {
-    /* margin-bottom: 1rem; */
     margin-right: 0;
+  }
+
+  .sec2 .card_con .text {
+    padding: 3.5rem;
+  }
+
+  .sec4 .video_desc h2,
+  .sec5 h2 {
+    font-size: var(--font_size_H3_24pt);
+  }
+
+  .sec4 .video_desc h2::before,
+  .sec4 .video_desc h2::after,
+  .sec5 h2::before,
+  .sec5 h2::after {
+    width: 25%;
+  }
+
+  .sec4 .video_desc strong {
+    font-size: 0.8rem;
+  }
+
+  .sec4 .digital_museum_slide li p {
+    font-size: 0.8rem;
+  }
+
+  .sec4 > a {
+    margin-top: 2rem;
+    padding: 0.3rem 2rem;
+    font-size: var(--font_size_H4_16pt);
   }
 }
