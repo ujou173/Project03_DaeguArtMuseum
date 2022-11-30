@@ -24,10 +24,27 @@ $btnHam.addEventListener("click", function () {
   document.body.classList.toggle("scroll_lock");
 });
 
-//햄버거 lnag 버튼
+// 햄버거 lnag 버튼
 const $hamLangList = document.querySelector(".ham_lang ul");
 $hamLang.addEventListener("click", function () {
   $hamLangList.classList.toggle("sl_toggle");
+});
+
+// 메가메뉴가 열려있는 상태로 브라우저 사이즈가 일정 크기이상 커질 경우
+// 메가메뉴를 자동으로 닫음
+
+let bodyWd = document.body.offsetWidth + 17;
+
+window.addEventListener("resize", function () {
+  bodyWd = document.body.offsetWidth + 17;
+  if (bodyWd > 700) {
+    $btnHam.classList.remove("on");
+    $megaBg.classList.remove("on");
+    setTimeout(function () {
+      $hamGnb.classList.remove("on");
+      $hamLang.classList.remove("on");
+    }, 200);
+  }
 });
 
 // sec1 메인배너 슬라이드
@@ -179,6 +196,7 @@ var youtubeSl = new Swiper(".digital_museum_slide", {
 
 //sec4 디지털 미술관 동영상 클릭시 play
 // iframe 사용으로 일단 보류
+// iframe 제거
 const $vidList = document.querySelectorAll(".digital_museum_slide li"),
   $btnNext = document.querySelector(".digital_museum_next"),
   $btnPrev = document.querySelector(".digital_museum_prev"),
@@ -219,3 +237,58 @@ $btnPrev.addEventListener("click", function () {
     vidToggle = 0;
   });
 });
+
+// sec5 animation 효과 제거
+const $colWrap = document.querySelector(".sec5 > div");
+const $colCon = document.querySelector(".collection");
+const $colList = document.querySelectorAll(".collection_list");
+
+let slideCount = $colList.length;
+let firstList = $colCon.firstElementChild;
+let lastList = $colCon.lastElementChild;
+
+let slideEvent = 0;
+
+function colSL() {
+  $colCon.style.cssText = `margin-left:${-bodyWd}px; transition:0.5s`;
+  console.log(bodyWd);
+  setTimeout(() => {
+    $colCon.insertBefore(firstList, null);
+    $colCon.style = `margin-left: 0`;
+  }, 500);
+  firstList = $colCon.firstElementChild;
+  lastList = $colCon.lastElementChild;
+}
+
+let timer = null;
+
+window.addEventListener("resize", function () {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    if (slideEvent == 1) {
+      console.log("함수작동");
+      clearSl = setInterval(() => {
+        colSL();
+      }, 5000);
+    }
+  }, 1000);
+});
+
+window.addEventListener("resize", function () {
+  bodyWd = document.body.offsetWidth + 17;
+  console.log(bodyWd);
+  if (bodyWd < 701) {
+    $colWrap.classList.remove("on");
+    $colWrap.classList.add("off");
+    slideEvent = 1;
+  } else if (bodyWd > 700) {
+    $colWrap.classList.remove("off");
+    $colWrap.classList.add("on");
+    if (slideEvent == 1) {
+      slideEvent = 0;
+      clearInterval(clearSl);
+      console.log("함수종료");
+    }
+  }
+});
+// sec5 mobile 자동 슬라이드

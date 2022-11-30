@@ -968,7 +968,9 @@ main {
   right: 0;
 }
 
-.sec5 > div {
+/* pc 버전 소장품 슬라이드 ------------------------------------------------------------- */
+
+.sec5 > .wrap.on {
   /* border: 1px solid red; */
   position: relative;
   padding-top: 30%;
@@ -978,7 +980,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.sec5 .collection {
+.sec5 .wrap.on .collection {
   display: flex;
   width: 350%;
   position: absolute;
@@ -987,23 +989,23 @@ main {
   animation: collect 90s linear infinite;
 }
 
-.sec5 .collection:hover {
+.sec5 .wrap.on .collection:hover {
   animation-play-state: paused;
 }
 
-.sec5 .collection li {
+.sec5 .wrap.on .collection li {
   /* border: 3px solid red; */
   padding: 2rem 0 5rem;
 }
 
-.sec5 .collection li img {
+.sec5 .wrap.on .collection li img {
   width: 100%;
   /* border: 1px solid var(--color_dark_gray); */
   transition: var(--speed_05);
   padding: 0 1rem;
 }
 
-.sec5 .collection li img:hover {
+.sec5 .wrap.on .collection li img:hover {
   transform: scale(1.05);
 }
 
@@ -1025,6 +1027,30 @@ main {
     left: 0;
   }
 }
+/* pc 버전 소장품 슬라이드 ------------------------------------------------------------- */
+/* 모바일 버전 소장품 슬라이드 ------------------------------------------------------------- */
+
+.sec5 .wrap.off .collection {
+  /* border: 2px solid blue; */
+  display: flex;
+  width: 1900%;
+}
+
+.sec5 .wrap.off .collection_list {
+  /* border: 1px solid red; */
+  width: calc(100% / 19);
+  height: 600px;
+  overflow: hidden;
+}
+
+.sec5 .wrap.off .collection li img {
+  /* padding: 1rem; */
+  /* border: 1px solid green; */
+  width: 100%;
+  height: auto;
+}
+
+/* 모바일 버전 소장품 슬라이드 ------------------------------------------------------------- */
 
 .sec5 > a {
   display: inline-block;
@@ -1049,7 +1075,7 @@ footer {
   border: 1px solid var(--color_light_gray);
   border-left: none;
   border-right: none;
-  margin-top: 3rem;
+  margin-top: 5%;
   padding: 1rem 0;
   font-size: var(--font_size_b2_16pt);
   font-family: var(--font_Pretendard);
@@ -1085,34 +1111,38 @@ footer {
 
 .footer_left address {
   display: flex;
-  padding: 0 0 0 1rem;
+  padding: 0;
 }
 
 .footer_left address span {
-  padding-right: 2rem;
+  padding: 0 1rem;
   position: relative;
 }
 
-.footer_left address span:last-of-type {
-  padding-right: 0;
+.footer_left address p:last-of-type span::after {
+  display: none;
 }
 
 .footer_left address span::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0;
   transform: translateY(-50%);
   width: 1px;
   height: 80%;
   background-color: var(--color_dark_gray);
 }
 
-.footer_left address span:last-of-type:after {
-  display: none;
+.footer_left address strong {
+  padding-left: 1rem;
 }
 
-.footer_left address p::after {
+.footer_left address p {
+  position: relative;
+}
+
+.footer_left address span::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1145,6 +1175,11 @@ footer {
   .sec5 h2::before,
   .sec5 h2::after {
     width: 35%;
+  }
+
+  .sns_icon p {
+    font-size: 1.7rem;
+    margin-left: 0.75rem;
   }
 }
 
@@ -1204,11 +1239,54 @@ footer {
     margin-bottom: 0;
     margin-right: 2rem;
   }
+
+  .footer_left > * {
+    padding: 0 0.5rem;
+  }
+
+  .footer_left address {
+    padding-right: 0.5rem;
+  }
+
+  .footer_left address span {
+    padding: 0 0.5rem;
+  }
 }
 
-@media (max-width: 1070px) {
-  /* 푸터 주소,전화,팩스를 display block으로 만들어서 wrap 처리하면 될 듯 */
-  /* 아니면 adress 자체를 block으로 해서 밑으로 내리던가 */
+@media (max-width: 1050px) {
+  .footer_wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer_left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer_left a:last-of-type::after {
+    display: none;
+  }
+
+  .footer_left address * {
+    padding: 0 !important;
+  }
+
+  .footer_left address {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer_left address span::after {
+    display: none;
+  }
 }
 
 @media (max-width: 935px) {
@@ -1243,13 +1321,6 @@ footer {
 
   .sec4 .digital_museum_slide li p {
     font-size: var(--font_size_b2_16pt);
-  }
-
-  .footer_wrap {
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 
   .footer_left {
@@ -1341,6 +1412,10 @@ footer {
   .sec4 .digital_museum_next::after,
   .sec4 .digital_museum_prev::after {
     font-size: 2rem;
+  }
+
+  .sec5 > a {
+    display: none;
   }
 }
 
