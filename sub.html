@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대구미술관</title>
+    <link rel="stylesheet" href="./CSS/RSM_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./CSS/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./JS/sub.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- 햄버거 버튼 메가메뉴 -->
+      <div class="mega_bg"></div>
+      <div class="hd_ham">
+        <nav>
+          <ul class="ham_gnb">
+            <li>
+              <a href="">전시</a>
+              <ul class="ham_sub">
+                <li><a href="#">현재전시</a></li>
+                <li><a href="#">지난전시</a></li>
+                <li><a href="#">예정전시</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">교육 및 행사</a>
+              <ul class="ham_sub">
+                <li><a href="#">렉쳐</a></li>
+                <li><a href="#">전시연계</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">소장품</a>
+              <ul class="ham_sub">
+                <li><a href="#">소장품 검색</a></li>
+                <li><a href="#">이건희 컬렉션</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">디지털 미술관</a>
+              <ul class="ham_sub">
+                <li><a href="#">디지털 미술관</a></li>
+                <li><a href="#">미술 정보 센터</a></li>
+                <li><a href="#">아카이브실</a></li>
+                <li><a href="#">디지털 가상공간</a></li>
+                <li><a href="#">사진자료</a></li>
+                <li><a href="#">발간자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">미술상</a>
+              <ul class="ham_sub">
+                <li><a href="#">이인성미술상</a></li>
+                <li><a href="#">정점식미술상</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">커뮤니티</a>
+              <ul class="ham_sub">
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">관람후기</a></li>
+                <li><a href="#">네트워크</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">공지사항</a>
+              <ul class="ham_sub">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">새 소식</a></li>
+                <li><a href="#">메일링 서비스</a></li>
+                <li><a href="#">보도자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">미술관 소개</a>
+              <ul class="ham_sub">
+                <li><a href="#">대구미술관</a></li>
+                <li><a href="#">관람안내</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">서포터즈</a></li>
+                <li><a href="#">구성원</a></li>
+                <li><a href="#">시설안내</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="ham_lang">
+          <button>KOR △</button>
+          <ul>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">CN</a></li>
+            <li><a href="#">JP</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 헤더 시작 -->
+      <header>
+        <div class="hd_top mw">
+          <div class="hd_logo">
+            <h1>
+              <a href="#" class="top_logo"><img src="./img/top_logo.svg" alt="logo" /></a>
+              <a href="#" class="m_top_logo"><img src="./img/m_top_logo.svg" alt="symbol" /></a>
+            </h1>
+          </div>
+          <div class="lang">
+            <button>KOR ▽</button>
+            <ul>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">CN</a></li>
+              <li><a href="#">JP</a></li>
+            </ul>
+          </div>
+          <div class="ham">
+            <span class="line_bar"></span>
+            <span class="line_bar"></span>
+            <span class="line_bar"></span>
+          </div>
+        </div>
+        <div class="hd_bottom">
+          <nav>
+            <ul class="gnb mw">
+              <li>
+                <a href="">전시</a>
+                <ul class="sub">
+                  <li><a href="#">현재전시</a></li>
+                  <li><a href="#">지난전시</a></li>
+                  <li><a href="#">예정전시</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">교육 및 행사</a>
+                <ul class="sub">
+                  <li><a href="#">렉쳐</a></li>
+                  <li><a href="#">전시연계</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">소장품</a>
+                <ul class="sub">
+                  <li><a href="#">소장품 검색</a></li>
+                  <li><a href="#">이건희 컬렉션</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">디지털 미술관</a>
+                <ul class="sub">
+                  <li><a href="#">디지털 미술관</a></li>
+                  <li><a href="#">미술 정보 센터</a></li>
+                  <li><a href="#">아카이브실</a></li>
+                  <li><a href="#">디지털 가상공간</a></li>
+                  <li><a href="#">사진자료</a></li>
+                  <li><a href="#">발간자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">미술상</a>
+                <ul class="sub">
+                  <li><a href="#">이인성미술상</a></li>
+                  <li><a href="#">정점식미술상</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">커뮤니티</a>
+                <ul class="sub">
+                  <li><a href="#">게시판</a></li>
+                  <li><a href="#">관람후기</a></li>
+                  <li><a href="#">네트워크</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">공지사항</a>
+                <ul class="sub">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">새 소식</a></li>
+                  <li><a href="#">메일링 서비스</a></li>
+                  <li><a href="#">보도자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">미술관 소개</a>
+                <ul class="sub">
+                  <li><a href="#">대구미술관</a></li>
+                  <li><a href="#">관람안내</a></li>
+                  <li><a href="#">오시는길</a></li>
+                  <li><a href="#">서포터즈</a></li>
+                  <li><a href="#">구성원</a></li>
+                  <li><a href="#">시설안내</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="sub_sec1 mw">
+        <h2>소장품 검색</h2>
+        <div class="breadcrumbs">
+          <a href="#"><i class="fa-solid fa-house"></i></a>
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="#">소장품</a>
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="#">소장품 검색</a>
+        </div>
+        <nav>
+          <ul class="lnb">
+            <li class="on"><a href="#">전체</a></li>
+            <li><a href="#">사진</a></li>
+            <li><a href="#">판화</a></li>
+            <li><a href="#">공예</a></li>
+            <li><a href="#">회화</a></li>
+            <li><a href="#">조각/입체</a></li>
+            <li><a href="#">서예</a></li>
+            <li><a href="#">뉴미디어</a></li>
+          </ul>
+        </nav>
+        <form>
+          <div>
+            <select name="lnb_list" id="lnb_list">
+              <option value="전체" selected>전체</option>
+              <option value="작품 명">작품명</option>
+              <option value="작가 명">작가명</option>
+              <option value="제작년도">제작년도</option>
+            </select>
+            <input type="text" name="search_collection" id="search_collection" placeholder="검색어를 입력하세요" maxlength="14" />
+            <input type="submit" value="검색" class="search_submit" />
+            <button class="more_search">상세 검색</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="sub_sec2 mw">
+        <ul>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect02.jpg" alt="collect02" /></div>
+            <p>5개의 레드와 바이올렛 이등변으로 된 각기둥, 4개의 거울, 위치 작업, 고부조 서울 4</p>
+            <p>다니엘 뷔렌</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect10.jpg" alt="collect10" /></div>
+            <p>폐허에서</p>
+            <p>권옥연</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect05.jpg" alt="collect05" /></div>
+            <p>다각(多刻)</p>
+            <p>최하늘</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect11.jpg" alt="collect11" /></div>
+            <p>공간 속의 사람들 92-11</p>
+            <p>박남희</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect18.jpg" alt="collect18" /></div>
+            <p>바라보는 사람1</p>
+            <p>안성금</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect12.jpg" alt="collect12" /></div>
+            <p>Painter</p>
+            <p>김신일</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect09.jpg" alt="collect09" /></div>
+            <p>무제</p>
+            <p>김태</p>
+            <a href="#"></a>
+          </li>
+          <li>
+            <div class="sub_sec2_img"><img src="./img/collection/collect13.jpg" alt="collect13" /></div>
+            <p>작은 달(시간이 흐르면)</p>
+            <p>비아 레반도프스키</p>
+            <a href="#"></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sub_sec3 mw">페이지 버튼들</section>
+
+      <footer>
+        <div class="footer_wrap mw">
+          <div class="footer_left">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">오시는길</a>
+            <address>
+              <span> 대구광역시 수성구 미술관로 40(삼덕동) 우편번호 42250</span>
+              <p>
+                <strong>대표전화: </strong>
+                <span>&#43;82 53 803 7900</span>
+              </p>
+              <p>
+                <strong>팩스: </strong>
+                <span>&#43;82 53 803 7859</span>
+              </p>
+            </address>
+          </div>
+          <div class="sns_icon">
+            <p>
+              <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            </p>
+            <p>
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </p>
+            <p>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1167,6 +1167,164 @@ footer {
 
 /* footer end */
 
+/* ------------------------------------------ sub page CSS -------------------------------------- */
+
+/* sub_sec1 start */
+
+.sub_sec1 {
+  border-bottom: 1px solid var(--color_light_gray);
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.sub_sec1 h2 {
+  font-size: var(--font_size_H2_32pt);
+  font-family: var(--font_NanumSquareNeo);
+  padding: 1rem 0;
+}
+
+.sub_sec1 .breadcrumbs a {
+  font-size: var(--font_size_b2_16pt);
+  font-family: var(--font_Pretendard);
+}
+
+.sub_sec1 .lnb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.sub_sec1 .lnb li {
+  margin: 0 2rem;
+}
+
+.sub_sec1 .lnb li a {
+  display: inline-block;
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+  position: relative;
+}
+
+.sub_sec1 .lnb li a::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color_main_01);
+  opacity: 0;
+  transition: var(--speed_03);
+}
+
+.sub_sec1 .lnb li a::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 2rem;
+  background-color: var(--color_dark_gray);
+}
+
+.sub_sec1 .lnb li:last-of-type a::after {
+  display: none;
+}
+
+.sub_sec1 .lnb li:first-of-type {
+  margin-left: 0;
+}
+
+.sub_sec1 .lnb li.on a,
+.sub_sec1 .lnb li:hover a {
+  color: var(--color_main_02);
+}
+
+.sub_sec1 .lnb li.on a::before,
+.sub_sec1 .lnb li:hover a::before {
+  opacity: 1;
+}
+
+.sub_sec1 form div {
+  /* border: 1px solid red; */
+}
+
+.sub_sec1 form div select {
+  font-size: var(--font_size_b2_16pt);
+  font-family: var(--font_Pretendard);
+  width: 15%;
+  height: 40px;
+  outline: transparent;
+}
+
+.sub_sec1 .search_submit {
+  border: 1px solid var(--color_light_gray);
+  background-color: var(--color_main_02);
+}
+
+/* sub_sec1 end */
+/* sub_sec2 start */
+
+.sub_sec2 ul {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color_light_gray);
+}
+
+.sub_sec2 ul li {
+  /* border: 1px solid violet; */
+  width: calc(100% / 4 - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.sub_sec2 ul li:nth-of-type(4) ~ li {
+  margin-bottom: 0;
+}
+
+.sub_sec2 ul li div {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.sub_sec2 ul li div img {
+  width: 100%;
+}
+
+.sub_sec2 ul li p {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  font-size: var(--font_size_b1_24pt);
+  font-family: var(--font_Pretendard);
+}
+
+.sub_sec2 ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* sub_sec2 end */
+
+/* ---------------------------------------- sub page CSS end ------------------------------------ */
+
 /* @media */
 
 @media (max-width: 1500px) {

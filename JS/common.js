@@ -260,6 +260,13 @@ function colSL() {
   lastList = $colCon.lastElementChild;
 }
 
+// ※ <나중에 수정 필요> ※ --------------------------------------------------------------------
+// 1. resize에 의한 이벤트의 중복 실행 문제 해결
+// 700px 아래로 떨어졌을때 딱 한번만 함수가 실행되어야 하는데 1px 바뀔때마다 실행됨.
+// 현재 타이밍 함수로 resize가 전부 끝나고 1초 뒤에 이벤트가 실행되도록 적용해놓았음
+// 그러나 이벤트가 실행되고나서 다시 resize가 일어날 경우 이벤트의 중복이 발생함
+
+// sec5 mobile 자동 슬라이드
 let timer = null;
 
 window.addEventListener("resize", function () {
@@ -291,4 +298,3 @@ window.addEventListener("resize", function () {
     }
   }
 });
-// sec5 mobile 자동 슬라이드
