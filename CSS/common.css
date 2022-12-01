@@ -1167,6 +1167,149 @@ footer {
 
 /* ------------------------------------------ sub page CSS -------------------------------------- */
 
+/* sub page 상세검색 모달창 */
+
+.search_bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  display: none;
+}
+
+.search_bg.on {
+  display: block;
+}
+
+.search_modal {
+  position: absolute;
+  width: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10010;
+  background-color: var(--color_white);
+  display: none;
+}
+
+.search_modal.on {
+  display: block;
+}
+
+.search_modal .modal_title {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color_main_02);
+  padding: 0.5rem;
+  color: white;
+  position: relative;
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+}
+
+.search_modal .modal_title button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  font-size: var(--font_size_H3_24pt);
+  font-family: var(--font_NanumSquareNeo);
+}
+
+.search_modal .modal_title button:hover {
+  color: black;
+}
+
+.search_modal .modal_desc p {
+  width: fit-content;
+  margin-left: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: var(--font_size_b2_16pt);
+  font-family: var(--font_Pretendard);
+}
+
+.search_modal .modal_desc p span {
+  position: relative;
+}
+
+.search_modal .modal_desc p span::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  /* border-radius: 50%; */
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  background-color: var(--color_main_01);
+}
+
+.search_modal .modal_form {
+  border-top: 1px solid var(--color_dark_gray);
+}
+
+.search_modal .modal_form > form > div {
+  border-bottom: 1px solid var(--color_dark_gray);
+}
+
+.search_modal .modal_form > form > div > label {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  line-height: 2;
+  background-color: var(--color_light_gray);
+  font-size: var(--font_size_H4_16pt);
+  font-family: var(--font_NanumSquareNeo);
+}
+
+.search_modal .modal_form > form > div > input {
+  margin-left: 1rem;
+  font-size: var(--font_size_b2_16pt);
+  font-family: var(--font_Pretendard);
+}
+
+.search_modal .modal_form > form > div:last-of-type {
+  display: flex;
+}
+
+.search_modal .modal_form > form > div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.search_modal .search_submit {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0;
+  outline: transparent;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color_main_01);
+  color: white;
+  cursor: pointer;
+  transition: var(--speed_03);
+}
+
+.search_modal .search_submit:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* sub page 상세검색 모달창 */
+
 /* sub_sec1 start */
 
 .sub_sec1 {

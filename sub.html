@@ -114,6 +114,76 @@
         </div>
       </div>
 
+      <!-- 상세검색 모달창 -->
+      <div class="search_bg"></div>
+      <article class="search_modal">
+        <div class="modal_title">
+          <p>상세검색</p>
+          <button>X</button>
+        </div>
+        <div class="modal_desc">
+          <p>
+            <span>작품명을 정확히 알지 못하는 경우 일부만 입력하셔도 검색이 가능합니다</span>
+            <span>제작년도로 검색하실 경우 숫자만 입력하세요. ex) 1996년도 검색시 1996만 입력</span>
+            <span>아무것도 입력하지 않고 유형만 선택하실 경우 해당 유형의 모든 작품이 검색됩니다</span>
+          </p>
+        </div>
+        <div class="modal_form">
+          <form>
+            <div>
+              <label for="artwork_name">작품명</label>
+              <input type="text" id="artwork_name" name="artwork_name" title="작품명을 입력하세요" placeholder="작품명을 입력하세요" />
+            </div>
+            <div>
+              <label for="artwork_name">작가명</label>
+              <input type="text" id="author_name" name="author_name" title="작가명을 입력하세요" placeholder="작가명을 입력하세요" />
+            </div>
+            <div>
+              <label for="artwork_name">제작년도</label>
+              <input type="text" id="year" name="year" title="제작년도를 입력하세요" placeholder="제작년도를 입력하세요" />년
+            </div>
+            <div>
+              <label for="artwork_type">작품 유형</label>
+              <ul>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork01" />
+                  <label for="artwork01">전체</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork02" />
+                  <label for="artwork02">사진</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork03" />
+                  <label for="artwork03">판화</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork04" />
+                  <label for="artwork04">공예</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork05" />
+                  <label for="artwork05">회화</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork06" />
+                  <label for="artwork06">조각/입체</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork07" />
+                  <label for="artwork07">서예</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="artwork_type" id="artwork08" />
+                  <label for="artwork08">뉴미디어</label>
+                </li>
+              </ul>
+            </div>
+            <input type="submit" value="검색" class="search_submit" />
+          </form>
+        </div>
+      </article>
+
       <!-- 헤더 시작 -->
       <header>
         <div class="hd_top mw">
