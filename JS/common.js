@@ -49,6 +49,7 @@ window.addEventListener("resize", function () {
 
 // sec1 메인배너 슬라이드
 var mainBannerSl = new Swiper(".main_banner", {
+  loop: true,
   autoplay: {
     delay: 5500,
     disableOnInteraction: false,
