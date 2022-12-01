@@ -1415,7 +1415,12 @@ footer {
   opacity: 1;
 }
 
+.sub_sec1 div:last-of-type {
+  display: flex;
+}
+
 .sub_sec1 form {
+  width: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1467,6 +1472,7 @@ footer {
 }
 
 .sub_sec1 .more_search {
+  display: inline-block;
   border: 1px solid var(--color_light_gray);
   background-color: var(--color_main_01);
   color: var(--color_white);
