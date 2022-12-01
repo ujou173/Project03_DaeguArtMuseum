@@ -140,7 +140,7 @@
             </div>
             <div>
               <label for="artwork_name">제작년도</label>
-              <input type="text" id="year" name="year" title="제작년도를 입력하세요" placeholder="제작년도를 입력하세요" />년
+              <input type="text" id="year" name="year" title="제작년도를 입력하세요" placeholder="제작년도를 입력하세요" />
             </div>
             <div>
               <label for="artwork_type">작품 유형</label>
@@ -301,7 +301,7 @@
           </ul>
         </nav>
         <div>
-          <form>
+          <form class="form_con">
             <select name="lnb_list" id="lnb_list">
               <option value="전체" selected>전체</option>
               <option value="사진">사진</option>
@@ -319,9 +319,13 @@
               <option value="제작년도">제작년도</option>
             </select>
             <input type="text" name="search_collection" id="search_collection" placeholder="검색어를 입력하세요" maxlength="14" />
-            <input type="submit" value="검색" class="search_submit" />
           </form>
-          <button class="more_search">상세 검색</button>
+          <div>
+            <form>
+              <input type="submit" value="검색" class="search_submit" />
+            </form>
+            <button class="more_search">상세 검색</button>
+          </div>
         </div>
       </section>
 
