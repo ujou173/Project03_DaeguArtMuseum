@@ -238,6 +238,20 @@ $btnPrev.addEventListener("click", function () {
   });
 });
 
+// 스와이프시 중앙의 포커스 된 동영상을 제외하고 나머지 동영상 자동 정지
+window.addEventListener("mouseup", function () {
+  if ($vidList[1].classList.contains("swiper-slide-next")) {
+    $vidList[1].querySelector("video").pause();
+    $vidList[2].querySelector("video").pause();
+  } else if ($vidList[1].classList.contains("swiper-slide-active")) {
+    $vidList[0].querySelector("video").pause();
+    $vidList[2].querySelector("video").pause();
+  } else if ($vidList[1].classList.contains("swiper-slide-prev")) {
+    $vidList[1].querySelector("video").pause();
+    $vidList[2].querySelector("video").pause();
+  }
+});
+
 // sec5 mobile 자동 슬라이드
 const $colWrap = document.querySelector(".sec5 > div");
 const $colCon = document.querySelector(".collection");
