@@ -238,7 +238,7 @@ $btnPrev.addEventListener("click", function () {
   });
 });
 
-// sec5 animation 효과 제거
+// sec5 mobile 자동 슬라이드
 const $colWrap = document.querySelector(".sec5 > div");
 const $colCon = document.querySelector(".collection");
 const $colList = document.querySelectorAll(".collection_list");
@@ -246,9 +246,9 @@ const $colList = document.querySelectorAll(".collection_list");
 let slideCount = $colList.length;
 let firstList = $colCon.firstElementChild;
 let lastList = $colCon.lastElementChild;
-
 let slideEvent = 0;
 
+// 자동 슬라이드 함수
 function colSL() {
   $colCon.style.cssText = `margin-left:${-bodyWd}px; transition:0.5s`;
   console.log(bodyWd);
@@ -260,41 +260,28 @@ function colSL() {
   lastList = $colCon.lastElementChild;
 }
 
-// ※ <나중에 수정 필요> ※ --------------------------------------------------------------------
-// 1. resize에 의한 이벤트의 중복 실행 문제 해결
-// 700px 아래로 떨어졌을때 딱 한번만 함수가 실행되어야 하는데 1px 바뀔때마다 실행됨.
-// 현재 타이밍 함수로 resize가 전부 끝나고 1초 뒤에 이벤트가 실행되도록 적용해놓았음
-// 그러나 이벤트가 실행되고나서 다시 resize가 일어날 경우 이벤트의 중복이 발생함
-
-// sec5 mobile 자동 슬라이드
-let timer = null;
-
+// pc의 sec5 animation 효과 제거 후 자동 슬라이드 함수 실행
 window.addEventListener("resize", function () {
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    if (slideEvent == 1) {
-      console.log("함수작동");
-      clearSl = setInterval(() => {
-        colSL();
-      }, 5000);
-    }
-  }, 1000);
-});
-
-window.addEventListener("resize", function () {
-  bodyWd = document.body.offsetWidth + 17;
-  console.log(bodyWd);
-  if (bodyWd < 701) {
+  // bodyWd = document.body.offsetWidth + 17;
+  bodyWd = document.body.offsetWidth;
+  // console.log(bodyWd);
+  if (bodyWd + 17 < 701) {
     $colWrap.classList.remove("on");
     $colWrap.classList.add("off");
-    slideEvent = 1;
-  } else if (bodyWd > 700) {
+    if (slideEvent == 0) {
+      slideEvent++;
+      slideInterval = setInterval(colSL, 5000);
+      console.log("자동 슬라이드 실행");
+    } else {
+      // console.log("실행 안함");
+    }
+  } else if (bodyWd + 17 > 700) {
     $colWrap.classList.remove("off");
     $colWrap.classList.add("on");
-    if (slideEvent == 1) {
+    if (slideEvent >= 1) {
+      clearInterval(slideInterval);
       slideEvent = 0;
-      clearInterval(clearSl);
-      console.log("함수종료");
+      console.log("자동 슬라이드 종료");
     }
   }
 });

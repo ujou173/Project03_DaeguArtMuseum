@@ -119,8 +119,8 @@
         <div class="hd_top mw">
           <div class="hd_logo">
             <h1>
-              <a href="#" class="top_logo"><img src="./img/top_logo.svg" alt="logo" /></a>
-              <a href="#" class="m_top_logo"><img src="./img/m_top_logo.svg" alt="symbol" /></a>
+              <a href="./index.html" class="top_logo"><img src="./img/top_logo.svg" alt="logo" /></a>
+              <a href="./index.html" class="m_top_logo"><img src="./img/m_top_logo.svg" alt="symbol" /></a>
             </h1>
           </div>
           <div class="lang">
@@ -131,11 +131,7 @@
               <li><a href="#">JP</a></li>
             </ul>
           </div>
-          <div class="ham">
-            <span class="line_bar"></span>
-            <span class="line_bar"></span>
-            <span class="line_bar"></span>
-          </div>
+          <div class="ham"><span class="line_bar"></span><span class="line_bar"></span><span class="line_bar"></span></div>
         </div>
         <div class="hd_bottom">
           <nav>
@@ -214,9 +210,9 @@
         </div>
       </header>
       <section class="sub_sec1 mw">
-        <h2>소장품 검색</h2>
+        <h2><span>소장품 검색</span></h2>
         <div class="breadcrumbs">
-          <a href="#"><i class="fa-solid fa-house"></i></a>
+          <a href="./index.html"><i class="fa-solid fa-house"></i></a>
           <i class="fa-solid fa-angle-right"></i>
           <a href="#">소장품</a>
           <i class="fa-solid fa-angle-right"></i>
@@ -235,17 +231,25 @@
           </ul>
         </nav>
         <form>
-          <div>
-            <select name="lnb_list" id="lnb_list">
-              <option value="전체" selected>전체</option>
-              <option value="작품 명">작품명</option>
-              <option value="작가 명">작가명</option>
-              <option value="제작년도">제작년도</option>
-            </select>
-            <input type="text" name="search_collection" id="search_collection" placeholder="검색어를 입력하세요" maxlength="14" />
-            <input type="submit" value="검색" class="search_submit" />
-            <button class="more_search">상세 검색</button>
-          </div>
+          <select name="lnb_list" id="lnb_list">
+            <option value="전체" selected>전체</option>
+            <option value="사진">사진</option>
+            <option value="판화">판화</option>
+            <option value="공예">공예</option>
+            <option value="회화">회화</option>
+            <option value="조각/입체">조각/입체</option>
+            <option value="서예">서예</option>
+            <option value="뉴미디어">뉴미디어</option>
+          </select>
+          <select name="search_list" id="search_list">
+            <option value="전체" selected>전체</option>
+            <option value="작품 명">작품명</option>
+            <option value="작가 명">작가명</option>
+            <option value="제작년도">제작년도</option>
+          </select>
+          <input type="text" name="search_collection" id="search_collection" placeholder="검색어를 입력하세요" maxlength="14" />
+          <input type="submit" value="검색" class="search_submit" />
+          <button class="more_search">상세 검색</button>
         </form>
       </section>
 
@@ -302,7 +306,24 @@
         </ul>
       </section>
 
-      <section class="sub_sec3 mw">페이지 버튼들</section>
+      <section class="sub_sec3 mw">
+        <div class="pg_btns">
+          <p class="angle"><i class="fa-solid fa-angles-left"></i></p>
+          <p class="angle"><i class="fa-solid fa-angle-left"></i></p>
+          <p class="on">1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+          <p>9</p>
+          <p>10</p>
+          <p class="angle"><i class="fa-solid fa-angle-right"></i></p>
+          <p class="angle"><i class="fa-solid fa-angles-right"></i></p>
+        </div>
+      </section>
 
       <footer>
         <div class="footer_wrap mw">
