@@ -89,13 +89,13 @@ main {
   display: flex;
 }
 
-.ham_gnb > li {
+.ham_gnb > ul > li {
   /* border: 1px solid green; */
   width: 100%;
   /* text-align: center; */
 }
 
-.ham_gnb > li > a {
+.ham_gnb > ul > li > a {
   color: var(--color_main_03);
   width: 100%;
   /* border: 1px solid red; */
@@ -105,7 +105,7 @@ main {
   padding-left: 1.5rem;
 }
 
-.ham_gnb > li > a::before {
+.ham_gnb > ul > li > a::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -117,11 +117,11 @@ main {
   transform: translateY(-50%);
 }
 
-.ham_gnb > li:hover > a::before {
+.ham_gnb > ul > li:hover > a::before {
   background-color: var(--color_light_gray);
 }
 
-.ham_gnb .ham_sub {
+.ham_gnb .sub {
   /* display: none; */
   display: flex;
   /* flex-direction: column; */
@@ -132,13 +132,13 @@ main {
   padding-bottom: 1rem;
 }
 
-.ham_gnb .ham_sub a {
+.ham_gnb .sub a {
   padding-right: 0.5rem;
   color: white;
   opacity: 0.5;
 }
 
-.ham_gnb .ham_sub a:hover {
+.ham_gnb .sub a:hover {
   opacity: 1;
 }
 
@@ -202,6 +202,7 @@ main {
   left: auto;
   right: 0;
   z-index: 9999;
+  cursor: pointer;
 }
 
 .ham .line_bar {
@@ -328,14 +329,14 @@ main {
   border-right: none;
 }
 
-.hd_bottom .gnb {
+.hd_bottom .gnb > ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
-.hd_bottom .gnb::after {
+.hd_bottom .gnb > ul::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -345,21 +346,21 @@ main {
   z-index: 901;
 }
 
-.hd_bottom .gnb > li {
+.hd_bottom .gnb > ul > li {
   /* border: 1px solid red; */
   position: relative;
   width: 100%;
   text-align: center;
 }
 
-.hd_bottom .gnb > li > a {
+.hd_bottom .gnb > ul > li > a {
   display: block;
   padding: 0.5rem 0;
   font-size: var(--font_size_H4_16pt);
   font-family: var(--font_NanumSquareNeo);
 }
 
-.hd_bottom .gnb > li:hover > a {
+.hd_bottom .gnb > ul > li:hover > a {
   color: var(--color_main_02);
 }
 
@@ -383,7 +384,7 @@ main {
   background-color: var(--color_light_gray);
 }
 
-.hd_bottom .gnb:hover .sub {
+.hd_bottom .gnb > ul:hover .sub {
   height: 213px;
 }
 
@@ -400,7 +401,7 @@ main {
   background-color: var(--color_light_gray);
 }
 
-.hd_bottom .gnb > li:last-of-type .sub::after {
+.hd_bottom .gnb > ul > li:last-of-type .sub::after {
   content: "";
   position: absolute;
   top: 0;
@@ -971,84 +972,41 @@ main {
 
 /* pc 버전 소장품 슬라이드 ------------------------------------------------------------- */
 
-.sec5 > .wrap.on {
+.sec5 > .wrap {
   /* border: 1px solid red; */
-  position: relative;
-  padding-top: 30%;
-  top: 0;
-  left: 0;
+  /* position: relative; */
+  padding-bottom: 1rem;
+  /* top: 0; */
+  /* left: 0; */
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.sec5 .wrap.on .collection {
+.sec5 .wrap .collection {
   display: flex;
-  width: 350%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: collect 90s linear infinite;
+  /* width: 350%; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  transition-timing-function: linear;
 }
 
-.sec5 .wrap.on .collection:hover {
-  animation-play-state: paused;
-}
-
-.sec5 .wrap.on .collection li {
-  /* border: 3px solid red; */
+.sec5 .wrap .collection li {
   padding: 2rem 0 5rem;
+  max-height: 550px;
+  overflow: hidden;
 }
 
-.sec5 .wrap.on .collection li img {
+.sec5 .wrap .collection li img {
   width: 100%;
-  /* border: 1px solid var(--color_dark_gray); */
+  height: auto;
   transition: var(--speed_05);
   padding: 0 1rem;
 }
 
-.sec5 .wrap.on .collection li img:hover {
+.sec5 .wrap .collection li img:hover {
   transform: scale(1.05);
 }
-
-/* 소장품 애니메이션 */
-@keyframes collect {
-  0% {
-    left: 0;
-  }
-  47% {
-    left: -250%;
-  }
-  50% {
-    left: -250%;
-  }
-  97% {
-    left: 0;
-  }
-  100% {
-    left: 0;
-  }
-}
-/* pc 버전 소장품 슬라이드 ------------------------------------------------------------- */
-/* 모바일 버전 소장품 슬라이드 ------------------------------------------------------------- */
-
-.sec5 .wrap.off .collection {
-  display: flex;
-  width: 1900%;
-}
-
-.sec5 .wrap.off .collection_list {
-  width: calc(100% / 19);
-  height: 600px;
-  overflow: hidden;
-  padding: 1rem 0;
-}
-
-.sec5 .wrap.off .collection li img {
-  width: auto;
-  height: 100%;
-}
-
-/* 모바일 버전 소장품 슬라이드 ------------------------------------------------------------- */
 
 .sec5 > a {
   display: inline-block;
@@ -1265,7 +1223,7 @@ footer {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem 0.5rem 0.5rem;
 }
 
 .search_modal .modal_form > form > div::before {
