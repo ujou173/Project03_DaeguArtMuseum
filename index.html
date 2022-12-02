@@ -25,85 +25,14 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./JS/common.js" defer></script>
+    <script src="./JS/index.js" defer></script>
   </head>
   <body>
     <main>
       <!-- 햄버거 버튼 메가메뉴 -->
       <div class="mega_bg"></div>
       <div class="hd_ham">
-        <nav>
-          <ul class="ham_gnb">
-            <li>
-              <a href="#">전시</a>
-              <ul class="ham_sub">
-                <li><a href="#">현재전시</a></li>
-                <li><a href="#">지난전시</a></li>
-                <li><a href="#">예정전시</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">교육 및 행사</a>
-              <ul class="ham_sub">
-                <li><a href="#">렉쳐</a></li>
-                <li><a href="#">전시연계</a></li>
-                <li><a href="#">이벤트</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="./sub.html">소장품</a>
-              <ul class="ham_sub">
-                <li><a href="./sub.html">소장품 검색</a></li>
-                <li><a href="#">이건희 컬렉션</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">디지털 미술관</a>
-              <ul class="ham_sub">
-                <li><a href="#">디지털 미술관</a></li>
-                <li><a href="#">미술 정보 센터</a></li>
-                <li><a href="#">아카이브실</a></li>
-                <li><a href="#">디지털 가상공간</a></li>
-                <li><a href="#">사진자료</a></li>
-                <li><a href="#">발간자료</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">미술상</a>
-              <ul class="ham_sub">
-                <li><a href="#">이인성미술상</a></li>
-                <li><a href="#">정점식미술상</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">커뮤니티</a>
-              <ul class="ham_sub">
-                <li><a href="#">게시판</a></li>
-                <li><a href="#">관람후기</a></li>
-                <li><a href="#">네트워크</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">공지사항</a>
-              <ul class="ham_sub">
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">새 소식</a></li>
-                <li><a href="#">메일링 서비스</a></li>
-                <li><a href="#">보도자료</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">미술관 소개</a>
-              <ul class="ham_sub">
-                <li><a href="#">대구미술관</a></li>
-                <li><a href="#">관람안내</a></li>
-                <li><a href="#">오시는길</a></li>
-                <li><a href="#">서포터즈</a></li>
-                <li><a href="#">구성원</a></li>
-                <li><a href="#">시설안내</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <nav class="ham_gnb"></nav>
         <div class="ham_lang">
           <button>KOR △</button>
           <ul>
@@ -138,79 +67,7 @@
           </div>
         </div>
         <div class="hd_bottom">
-          <nav>
-            <ul class="gnb mw">
-              <li>
-                <a href="#">전시</a>
-                <ul class="sub">
-                  <li><a href="#">현재전시</a></li>
-                  <li><a href="#">지난전시</a></li>
-                  <li><a href="#">예정전시</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">교육 및 행사</a>
-                <ul class="sub">
-                  <li><a href="#">렉쳐</a></li>
-                  <li><a href="#">전시연계</a></li>
-                  <li><a href="#">이벤트</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="./sub.html">소장품</a>
-                <ul class="sub">
-                  <li><a href="./sub.html">소장품 검색</a></li>
-                  <li><a href="#">이건희 컬렉션</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">디지털 미술관</a>
-                <ul class="sub">
-                  <li><a href="#">디지털 미술관</a></li>
-                  <li><a href="#">미술 정보 센터</a></li>
-                  <li><a href="#">아카이브실</a></li>
-                  <li><a href="#">디지털 가상공간</a></li>
-                  <li><a href="#">사진자료</a></li>
-                  <li><a href="#">발간자료</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">미술상</a>
-                <ul class="sub">
-                  <li><a href="#">이인성미술상</a></li>
-                  <li><a href="#">정점식미술상</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">커뮤니티</a>
-                <ul class="sub">
-                  <li><a href="#">게시판</a></li>
-                  <li><a href="#">관람후기</a></li>
-                  <li><a href="#">네트워크</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">공지사항</a>
-                <ul class="sub">
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">새 소식</a></li>
-                  <li><a href="#">메일링 서비스</a></li>
-                  <li><a href="#">보도자료</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">미술관 소개</a>
-                <ul class="sub">
-                  <li><a href="#">대구미술관</a></li>
-                  <li><a href="#">관람안내</a></li>
-                  <li><a href="#">오시는길</a></li>
-                  <li><a href="#">서포터즈</a></li>
-                  <li><a href="#">구성원</a></li>
-                  <li><a href="#">시설안내</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+          <nav class="gnb mw"></nav>
         </div>
       </header>
       <section class="sec1">
@@ -466,63 +323,63 @@
       <section class="sec5">
         <h2 class="mw">소장품</h2>
         <!-- 소장품 flow 기능 -->
-        <div class="wrap on">
-          <ul class="collection">
-            <li class="collection_list">
+        <div class="swiper collectionSL wrap">
+          <ul class="swiper-wrapper collection">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect01.jpg" alt="collection01" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect02.jpg" alt="collection02" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect03.jpg" alt="collection03" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect04.jpg" alt="collection04" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect05.jpg" alt="collection05" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect06.jpg" alt="collection06" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect07.jpg" alt="collection07" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect08.jpg" alt="collection08" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect09.jpg" alt="collection09" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect10.jpg" alt="collection10" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect11.jpg" alt="collection11" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect12.jpg" alt="collection12" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect13.jpg" alt="collection13" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect14.jpg" alt="collection14" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect15.jpg" alt="collection15" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect16.jpg" alt="collection16" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect17.jpg" alt="collection17" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect18.jpg" alt="collection18" /></a>
             </li>
-            <li class="collection_list">
+            <li class="swiper-slide collection_list">
               <a href="#"><img src="./img/collection/collect19.jpg" alt="collection19" /></a>
             </li>
           </ul>

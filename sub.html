@@ -24,6 +24,7 @@
     ></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./JS/common.js" defer></script>
     <script src="./JS/sub.js" defer></script>
   </head>
   <body>
@@ -31,79 +32,7 @@
       <!-- 햄버거 버튼 메가메뉴 -->
       <div class="mega_bg"></div>
       <div class="hd_ham">
-        <nav>
-          <ul class="ham_gnb">
-            <li>
-              <a href="">전시</a>
-              <ul class="ham_sub">
-                <li><a href="#">현재전시</a></li>
-                <li><a href="#">지난전시</a></li>
-                <li><a href="#">예정전시</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">교육 및 행사</a>
-              <ul class="ham_sub">
-                <li><a href="#">렉쳐</a></li>
-                <li><a href="#">전시연계</a></li>
-                <li><a href="#">이벤트</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">소장품</a>
-              <ul class="ham_sub">
-                <li><a href="#">소장품 검색</a></li>
-                <li><a href="#">이건희 컬렉션</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">디지털 미술관</a>
-              <ul class="ham_sub">
-                <li><a href="#">디지털 미술관</a></li>
-                <li><a href="#">미술 정보 센터</a></li>
-                <li><a href="#">아카이브실</a></li>
-                <li><a href="#">디지털 가상공간</a></li>
-                <li><a href="#">사진자료</a></li>
-                <li><a href="#">발간자료</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">미술상</a>
-              <ul class="ham_sub">
-                <li><a href="#">이인성미술상</a></li>
-                <li><a href="#">정점식미술상</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">커뮤니티</a>
-              <ul class="ham_sub">
-                <li><a href="#">게시판</a></li>
-                <li><a href="#">관람후기</a></li>
-                <li><a href="#">네트워크</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">공지사항</a>
-              <ul class="ham_sub">
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">새 소식</a></li>
-                <li><a href="#">메일링 서비스</a></li>
-                <li><a href="#">보도자료</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">미술관 소개</a>
-              <ul class="ham_sub">
-                <li><a href="#">대구미술관</a></li>
-                <li><a href="#">관람안내</a></li>
-                <li><a href="#">오시는길</a></li>
-                <li><a href="#">서포터즈</a></li>
-                <li><a href="#">구성원</a></li>
-                <li><a href="#">시설안내</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <nav class="ham_gnb"></nav>
         <div class="ham_lang">
           <button>KOR △</button>
           <ul>
@@ -204,79 +133,7 @@
           <div class="ham"><span class="line_bar"></span><span class="line_bar"></span><span class="line_bar"></span></div>
         </div>
         <div class="hd_bottom">
-          <nav>
-            <ul class="gnb mw">
-              <li>
-                <a href="">전시</a>
-                <ul class="sub">
-                  <li><a href="#">현재전시</a></li>
-                  <li><a href="#">지난전시</a></li>
-                  <li><a href="#">예정전시</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">교육 및 행사</a>
-                <ul class="sub">
-                  <li><a href="#">렉쳐</a></li>
-                  <li><a href="#">전시연계</a></li>
-                  <li><a href="#">이벤트</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">소장품</a>
-                <ul class="sub">
-                  <li><a href="#">소장품 검색</a></li>
-                  <li><a href="#">이건희 컬렉션</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">디지털 미술관</a>
-                <ul class="sub">
-                  <li><a href="#">디지털 미술관</a></li>
-                  <li><a href="#">미술 정보 센터</a></li>
-                  <li><a href="#">아카이브실</a></li>
-                  <li><a href="#">디지털 가상공간</a></li>
-                  <li><a href="#">사진자료</a></li>
-                  <li><a href="#">발간자료</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">미술상</a>
-                <ul class="sub">
-                  <li><a href="#">이인성미술상</a></li>
-                  <li><a href="#">정점식미술상</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">커뮤니티</a>
-                <ul class="sub">
-                  <li><a href="#">게시판</a></li>
-                  <li><a href="#">관람후기</a></li>
-                  <li><a href="#">네트워크</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">공지사항</a>
-                <ul class="sub">
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">새 소식</a></li>
-                  <li><a href="#">메일링 서비스</a></li>
-                  <li><a href="#">보도자료</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">미술관 소개</a>
-                <ul class="sub">
-                  <li><a href="#">대구미술관</a></li>
-                  <li><a href="#">관람안내</a></li>
-                  <li><a href="#">오시는길</a></li>
-                  <li><a href="#">서포터즈</a></li>
-                  <li><a href="#">구성원</a></li>
-                  <li><a href="#">시설안내</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+          <nav class="gnb mw"></nav>
         </div>
       </header>
       <section class="sub_sec1 mw">
