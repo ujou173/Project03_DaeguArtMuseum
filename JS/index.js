@@ -237,19 +237,6 @@ var collectionSl = new Swiper(".collectionSL", {
   },
 });
 
-// 미해결 - auto play 즉시정지 방법 찾을 것
-
-// console.log(collectionSl);
-// console.log(collectionSl.params.speed);
-
-// const $colCon = document.querySelector(".collection");
-// $colCon.addEventListener("mouseenter", function () {
-//   collectionSl.autoplay.running = false;
-//   collectionSl.autoplay.paused = true;
-//   console.log(collectionSl.autoplay.paused);
-//   console.log(collectionSl);
-// });
-
 // swiper parameter 사용으로 전부 폐기 --------------------------------------------
 
 // // sec5 mobile 자동 슬라이드
